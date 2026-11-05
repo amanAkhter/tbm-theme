@@ -1,0 +1,154 @@
+{
+  "files": {
+    "svg": "files.svg",
+    "fontCharacter": "\\e900"
+  },
+  "search": {
+    "svg": "search.svg",
+    "fontCharacter": "\\e901"
+  },
+  "source-control": {
+    "svg": "source-control.svg",
+    "fontCharacter": "\\e902"
+  },
+  "run-view-icon": {
+    "svg": "play.svg",
+    "fontCharacter": "\\e903"
+  },
+  "extensions-view-icon": {
+    "svg": "extensions.svg",
+    "fontCharacter": "\\e904"
+  },
+  "explorer-view-icon": {
+    "svg": "files.svg",
+    "fontCharacter": "\\e905"
+  },
+  "settings-gear": {
+    "svg": "settings-gear.svg",
+    "fontCharacter": "\\e906"
+  },
+  "account": {
+    "svg": "account.svg",
+    "fontCharacter": "\\e907"
+  },
+  "chevron-right": {
+    "svg": "chevron-right.svg",
+    "fontCharacter": "\\e908"
+  },
+  "chevron-down": {
+    "svg": "chevron-down.svg",
+    "fontCharacter": "\\e909"
+  },
+  "chevron-up": {
+    "svg": "chevron-up.svg",
+    "fontCharacter": "\\e90a"
+  },
+  "chevron-left": {
+    "svg": "chevron-left.svg",
+    "fontCharacter": "\\e90b"
+  },
+  "close": {
+    "svg": "close.svg",
+    "fontCharacter": "\\e90c"
+  },
+  "add": {
+    "svg": "add.svg",
+    "fontCharacter": "\\e90d"
+  },
+  "remove": {
+    "svg": "remove.svg",
+    "fontCharacter": "\\e90e"
+  },
+  "edit": {
+    "svg": "edit.svg",
+    "fontCharacter": "\\e90f"
+  },
+  "trash": {
+    "svg": "trash.svg",
+    "fontCharacter": "\\e910"
+  },
+  "refresh": {
+    "svg": "refresh.svg",
+    "fontCharacter": "\\e911"
+  },
+  "ellipsis": {
+    "svg": "ellipsis.svg",
+    "fontCharacter": "\\e912"
+  },
+  "check": {
+    "svg": "check.svg",
+    "fontCharacter": "\\e913"
+  },
+  "warning": {
+    "svg": "warning.svg",
+    "fontCharacter": "\\e914"
+  },
+  "error": {
+    "svg": "error.svg",
+    "fontCharacter": "\\e915"
+  },
+  "info": {
+    "svg": "info.svg",
+    "fontCharacter": "\\e916"
+  },
+  "bell": {
+    "svg": "bell.svg",
+    "fontCharacter": "\\e917"
+  },
+  "debug-start": {
+    "svg": "debug-start.svg",
+    "fontCharacter": "\\e918"
+  },
+  "debug-pause": {
+    "svg": "debug-pause.svg",
+    "fontCharacter": "\\e919"
+  },
+  "debug-stop": {
+    "svg": "debug-stop.svg",
+    "fontCharacter": "\\e91a"
+  },
+  "debug-restart": {
+    "svg": "debug-restart.svg",
+    "fontCharacter": "\\e91b"
+  },
+  "split-horizontal": {
+    "svg": "split-horizontal.svg",
+    "fontCharacter": "\\e91c"
+  },
+  "terminal-view-icon": {
+    "svg": "terminal.svg",
+    "fontCharacter": "\\e91d"
+  },
+  "sync": {
+    "svg": "sync.svg",
+    "fontCharacter": "\\e91e"
+  },
+  "git-branch": {
+    "svg": "git-branch.svg",
+    "fontCharacter": "\\e91f"
+  },
+  "folder": {
+    "svg": "folder.svg",
+    "fontCharacter": "\\e920"
+  },
+  "file": {
+    "svg": "file.svg",
+    "fontCharacter": "\\e921"
+  },
+  "pin": {
+    "svg": "pin.svg",
+    "fontCharacter": "\\e922"
+  },
+  "lock": {
+    "svg": "lock.svg",
+    "fontCharacter": "\\e923"
+  },
+  "eye": {
+    "svg": "eye.svg",
+    "fontCharacter": "\\e924"
+  },
+  "copy": {
+    "svg": "copy.svg",
+    "fontCharacter": "\\e925"
+  }
+}

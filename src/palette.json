@@ -1,0 +1,98 @@
+{
+  "$schema": "./schema/palette.schema.json",
+  "name": "Carbonline Dark Palette",
+  "surfaces": {
+    "surface0": "#0d0f12",
+    "surface1": "#12151a",
+    "surface2": "#161a22",
+    "surface3": "#1d232e",
+    "border": "#272e3b",
+    "borderSubtle": "#1e2430"
+  },
+  "text": {
+    "primary": "#e4e8ee",
+    "secondary": "#9aa4b2",
+    "muted": "#687486",
+    "inverse": "#0d0f12"
+  },
+  "accent": {
+    "primary": "#00d2b4",
+    "hover": "#1fe3c7",
+    "subtle": "#00d2b41f",
+    "selection": "#00d2b433"
+  },
+  "accents": {
+    "teal": {
+      "primary": "#00d2b4",
+      "hover": "#1fe3c7",
+      "subtle": "#00d2b41f",
+      "selection": "#00d2b433"
+    },
+    "amber": {
+      "primary": "#fbbf24",
+      "hover": "#fcd34d",
+      "subtle": "#fbbf241f",
+      "selection": "#fbbf2433"
+    },
+    "emerald": {
+      "primary": "#34d399",
+      "hover": "#6ee7b7",
+      "subtle": "#34d3991f",
+      "selection": "#34d39933"
+    },
+    "sky": {
+      "primary": "#38bdf8",
+      "hover": "#7dd3fc",
+      "subtle": "#38bdf81f",
+      "selection": "#38bdf833"
+    },
+    "violet": {
+      "primary": "#c084fc",
+      "hover": "#d8b4fe",
+      "subtle": "#c084fc1f",
+      "selection": "#c084fc33"
+    }
+  },
+  "status": {
+    "error": "#f87171",
+    "errorSubtle": "#f8717122",
+    "warn": "#fbbf24",
+    "warnSubtle": "#fbbf2422",
+    "info": "#38bdf8",
+    "infoSubtle": "#38bdf822",
+    "ok": "#34d399",
+    "okSubtle": "#34d39922"
+  },
+  "syntax": {
+    "comment": "#637083",
+    "string": "#a3be8c",
+    "number": "#e5c07b",
+    "keyword": "#c678dd",
+    "function": "#61afef",
+    "type": "#4ec9b0",
+    "variable": "#e4e8ee",
+    "property": "#7dd3fc",
+    "operator": "#8b9cb3",
+    "punctuation": "#8b9cb3",
+    "tag": "#e06c75",
+    "regex": "#f4a261"
+  },
+  "ansi": {
+    "black": "#12151a",
+    "red": "#f87171",
+    "green": "#a3be8c",
+    "yellow": "#fbbf24",
+    "blue": "#61afef",
+    "magenta": "#c678dd",
+    "cyan": "#00d2b4",
+    "white": "#e4e8ee",
+    "brightBlack": "#637083",
+    "brightRed": "#fca5a5",
+    "brightGreen": "#bbf7d0",
+    "brightYellow": "#fde68a",
+    "brightBlue": "#93c5fd",
+    "brightMagenta": "#e9d5ff",
+    "brightCyan": "#5eead4",
+    "brightWhite": "#ffffff"
+  }
+}

@@ -1,0 +1,404 @@
+{
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": [
+        "comment",
+        "punctuation.definition.comment",
+        "comment.block.documentation",
+        "comment.line.double-slash"
+      ],
+      "settings": {
+        "foreground": "syntax.comment",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": [
+        "string",
+        "punctuation.definition.string",
+        "string.quoted",
+        "string.quoted.single",
+        "string.quoted.double",
+        "string.quoted.triple",
+        "string.template"
+      ],
+      "settings": {
+        "foreground": "syntax.string"
+      }
+    },
+    {
+      "name": "String Interpolation & Templates",
+      "scope": [
+        "punctuation.definition.template-expression",
+        "meta.template.expression",
+        "meta.interpolation"
+      ],
+      "settings": {
+        "foreground": "accent.primary"
+      }
+    },
+    {
+      "name": "Numbers & Constants",
+      "scope": [
+        "constant.numeric",
+        "constant.language.boolean",
+        "constant.language",
+        "constant.language.null",
+        "constant.language.undefined"
+      ],
+      "settings": {
+        "foreground": "syntax.number"
+      }
+    },
+    {
+      "name": "Constants Other",
+      "scope": [
+        "constant",
+        "constant.character",
+        "constant.other",
+        "support.constant"
+      ],
+      "settings": {
+        "foreground": "syntax.number"
+      }
+    },
+    {
+      "name": "Keywords & Control Flow",
+      "scope": [
+        "keyword",
+        "keyword.control",
+        "keyword.control.conditional",
+        "keyword.control.loop",
+        "keyword.control.import",
+        "keyword.control.export",
+        "keyword.control.flow"
+      ],
+      "settings": {
+        "foreground": "syntax.keyword"
+      }
+    },
+    {
+      "name": "Storage & Modifiers",
+      "scope": [
+        "storage",
+        "storage.type",
+        "storage.modifier",
+        "keyword.other"
+      ],
+      "settings": {
+        "foreground": "syntax.keyword"
+      }
+    },
+    {
+      "name": "Functions & Methods",
+      "scope": [
+        "entity.name.function",
+        "meta.function-call",
+        "support.function",
+        "variable.function",
+        "entity.name.method"
+      ],
+      "settings": {
+        "foreground": "syntax.function"
+      }
+    },
+    {
+      "name": "Types, Classes, Interfaces, Enums",
+      "scope": [
+        "entity.name.type",
+        "entity.name.class",
+        "entity.name.struct",
+        "entity.name.enum",
+        "entity.name.interface",
+        "entity.name.trait",
+        "entity.other.inherited-class",
+        "support.class",
+        "support.type"
+      ],
+      "settings": {
+        "foreground": "syntax.type"
+      }
+    },
+    {
+      "name": "Variables & Parameters",
+      "scope": [
+        "variable",
+        "variable.parameter",
+        "variable.language",
+        "variable.other.readwrite"
+      ],
+      "settings": {
+        "foreground": "syntax.variable"
+      }
+    },
+    {
+      "name": "Properties & Object Keys",
+      "scope": [
+        "variable.other.property",
+        "variable.other.object.property",
+        "support.type.property-name",
+        "meta.object-literal.key"
+      ],
+      "settings": {
+        "foreground": "syntax.property"
+      }
+    },
+    {
+      "name": "Operators & Punctuation",
+      "scope": [
+        "keyword.operator",
+        "keyword.operator.logical",
+        "keyword.operator.comparison",
+        "keyword.operator.assignment",
+        "punctuation.separator",
+        "punctuation.terminator",
+        "punctuation.accessor"
+      ],
+      "settings": {
+        "foreground": "syntax.operator"
+      }
+    },
+    {
+      "name": "Brackets & Delimiters",
+      "scope": [
+        "punctuation.definition.parameters",
+        "punctuation.definition.block",
+        "meta.brace"
+      ],
+      "settings": {
+        "foreground": "syntax.punctuation"
+      }
+    },
+    {
+      "name": "Decorators & Annotations",
+      "scope": [
+        "meta.decorator entity.name.function",
+        "meta.decorator",
+        "punctuation.definition.decorator",
+        "entity.name.function.decorator",
+        "storage.type.annotation"
+      ],
+      "settings": {
+        "foreground": "accent.primary"
+      }
+    },
+    {
+      "name": "HTML/XML/JSX Tags",
+      "scope": [
+        "entity.name.tag",
+        "punctuation.definition.tag"
+      ],
+      "settings": {
+        "foreground": "syntax.tag"
+      }
+    },
+    {
+      "name": "Tag Attributes",
+      "scope": [
+        "entity.other.attribute-name"
+      ],
+      "settings": {
+        "foreground": "syntax.property",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "JSON Keys",
+      "scope": [
+        "support.type.property-name.json",
+        "source.json meta.structure.dictionary.json > string.quoted.json"
+      ],
+      "settings": {
+        "foreground": "syntax.property"
+      }
+    },
+    {
+      "name": "YAML Keys",
+      "scope": [
+        "entity.name.tag.yaml",
+        "punctuation.definition.block.sequence.item.yaml"
+      ],
+      "settings": {
+        "foreground": "syntax.property"
+      }
+    },
+    {
+      "name": "CSS Selectors & Classes",
+      "scope": [
+        "entity.other.attribute-name.class.css",
+        "entity.other.attribute-name.id.css",
+        "entity.other.attribute-name.pseudo-class.css",
+        "entity.other.attribute-name.pseudo-element.css"
+      ],
+      "settings": {
+        "foreground": "syntax.function"
+      }
+    },
+    {
+      "name": "CSS Properties",
+      "scope": [
+        "support.type.property-name.css",
+        "support.type.property-name.media.css",
+        "variable.css"
+      ],
+      "settings": {
+        "foreground": "syntax.property"
+      }
+    },
+    {
+      "name": "CSS Values & Units",
+      "scope": [
+        "support.constant.property-value.css",
+        "keyword.other.unit.css",
+        "constant.numeric.css"
+      ],
+      "settings": {
+        "foreground": "syntax.number"
+      }
+    },
+    {
+      "name": "Shell Variables & Builtins",
+      "scope": [
+        "variable.other.normal.shell",
+        "variable.other.special.shell",
+        "variable.other.positional.shell",
+        "support.function.builtin.shell"
+      ],
+      "settings": {
+        "foreground": "syntax.property"
+      }
+    },
+    {
+      "name": "Rust Lifetimes & Macros",
+      "scope": [
+        "entity.name.type.lifetime.rust",
+        "support.macro.rust",
+        "entity.name.function.macro.rust"
+      ],
+      "settings": {
+        "foreground": "syntax.number"
+      }
+    },
+    {
+      "name": "Go Struct Tags & Package",
+      "scope": [
+        "entity.name.package.go",
+        "meta.struct.tag.go"
+      ],
+      "settings": {
+        "foreground": "syntax.string"
+      }
+    },
+    {
+      "name": "Regular Expressions & Escapes",
+      "scope": [
+        "string.regexp",
+        "constant.character.escape"
+      ],
+      "settings": {
+        "foreground": "syntax.regex"
+      }
+    },
+    {
+      "name": "Markdown Headings",
+      "scope": [
+        "markup.heading",
+        "punctuation.definition.heading.markdown"
+      ],
+      "settings": {
+        "foreground": "syntax.function",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown Bold",
+      "scope": [
+        "markup.bold"
+      ],
+      "settings": {
+        "foreground": "syntax.number",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Markdown Italic",
+      "scope": [
+        "markup.italic"
+      ],
+      "settings": {
+        "foreground": "syntax.keyword",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Markdown Inline Code & Blocks",
+      "scope": [
+        "markup.inline.raw",
+        "markup.raw.block",
+        "markup.raw.block.fenced.markdown"
+      ],
+      "settings": {
+        "foreground": "syntax.string"
+      }
+    },
+    {
+      "name": "Markdown Quotes",
+      "scope": [
+        "markup.quote",
+        "punctuation.definition.quote.begin.markdown"
+      ],
+      "settings": {
+        "foreground": "syntax.comment",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Markdown Links",
+      "scope": [
+        "markup.underline.link",
+        "string.other.link.title.markdown"
+      ],
+      "settings": {
+        "foreground": "accent.primary"
+      }
+    },
+    {
+      "name": "Invalid & Deprecated",
+      "scope": [
+        "invalid",
+        "invalid.illegal"
+      ],
+      "settings": {
+        "foreground": "status.error"
+      }
+    }
+  ],
+  "semanticTokenColors": {
+    "variable": "syntax.variable",
+    "variable.readonly": "syntax.number",
+    "variable.defaultLibrary": "syntax.function",
+    "property": "syntax.property",
+    "property.readonly": "syntax.number",
+    "parameter": "syntax.variable",
+    "function": "syntax.function",
+    "function.defaultLibrary": "syntax.function",
+    "method": "syntax.function",
+    "type": "syntax.type",
+    "type.defaultLibrary": "syntax.type",
+    "class": "syntax.type",
+    "class.defaultLibrary": "syntax.type",
+    "interface": "syntax.type",
+    "enum": "syntax.type",
+    "enumMember": "syntax.number",
+    "struct": "syntax.type",
+    "typeParameter": "syntax.type",
+    "keyword": "syntax.keyword",
+    "comment": "syntax.comment",
+    "string": "syntax.string",
+    "number": "syntax.number",
+    "regexp": "syntax.regex",
+    "operator": "syntax.operator"
+  }
+}
