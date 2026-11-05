@@ -1,0 +1,78 @@
+{
+  "name": "tbm-theme",
+  "displayName": "TBM Theme",
+  "description": "TBM Theme - Authentic, uniform dark theme with outline UI icons and calm file icons for Antigravity & VS Code",
+  "publisher": "amanAkhter",
+  "version": "2026.9.6",
+  "author": {
+    "name": "Aman Akhter",
+    "url": "https://github.com/amanAkhter"
+  },
+  "homepage": "https://github.com/amanAkhter",
+  "icon": "logo.png",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amanAkhter/tbm-theme"
+  },
+  "extensionKind": [
+    "ui"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "TBM Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tbm-theme.json"
+      },
+      {
+        "label": "TBM Theme High Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/tbm-theme-hc.json"
+      },
+      {
+        "label": "Vira Carbon",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tbm-theme.json"
+      }
+    ],
+    "productIconThemes": [
+      {
+        "id": "tbm-outline",
+        "label": "TBM Outline",
+        "path": "./icons/product-icon-theme.json"
+      },
+      {
+        "id": "viraOutline",
+        "label": "Vira Outline",
+        "path": "./icons/product-icon-theme.json"
+      }
+    ],
+    "iconThemes": [
+      {
+        "id": "tbm-icons",
+        "label": "TBM Icons",
+        "path": "./icons/file-icon-theme.json"
+      },
+      {
+        "id": "vira-icons-carbon",
+        "label": "vira icons carbon",
+        "path": "./icons/file-icon-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "build": "node scripts/build-tbm.mjs",
+    "validate": "node scripts/validate.mjs",
+    "package": "npx @vscode/vsce package --no-dependencies",
+    "doctor": "node scripts/doctor.mjs",
+    "install": "node scripts/install.mjs",
+    "apply-settings": "node scripts/apply-settings.mjs"
+  }
+}
