@@ -1,0 +1,22 @@
+# Sample YAML configuration demonstrating Carbonline syntax highlighting.
+version: "3.9"
+
+services:
+  editor:
+    image: antigravity-ide:1.107.0
+    container_name: antigravity_editor
+    environment:
+      - THEME_DEFAULT=Carbonline Dark
+      - ENABLE_SEMANTIC_TOKENS=true
+      - NODE_ENV=production
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+    volumes:
+      - ./testing:/workspace:rw
+    restart: unless-stopped
+
+networks:
+  default:
+    driver: bridge
+

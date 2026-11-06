@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "project": "carbonline-theme",
+  "version": "0.1.0",
+  "enabled": true,
+  "metrics": {
+    "contrastRatio": 14.88,
+    "totalColors": 269,
+    "wcagRating": "AAA"
+  },
+  "surfaces": [
+    { "level": 0, "hex": "#0d0f12", "label": "canvas" },
+    { "level": 1, "hex": "#12151a", "label": "editor" },
+    { "level": 2, "hex": "#161a22", "label": "chrome" }
+  ],
+  "author": {
+    "name": "Aman",
+    "handle": "aman",
+    "verified": null
+  }
+}
+

@@ -1,0 +1,41 @@
+:root {
+  --color-surface-bg: #12151a;
+  --color-surface-chrome: #161a22;
+  --color-text-main: #e4e8ee;
+  --color-accent: #00d2b4;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --border-radius-sm: 6px;
+}
+
+body.theme-carbonline {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-surface-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-mono);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--color-surface-chrome);
+  border-bottom: 1px solid #272e3b;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #0d0f12;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
