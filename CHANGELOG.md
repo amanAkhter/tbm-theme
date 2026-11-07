@@ -3,7 +3,8 @@
 ## [2026.9.6] - 2026-11-07
 
 ### Added
-- **TBM Burgundy Color Theme Variant**: Ultra-dark iPhone Pro titanium burgundy variant (`#160509` uniform obsidian wine base) with electric rose (`#FF7597`) accents, crisp rose-cream (`#F5E8EB`) text, sage mint (`#A8E6CF`) strings, cornflower periwinkle (`#7EB7E8`) functions, and dusty mauve (`#A87682`) comments. Exceeds WCAG AAA with **16.63:1** contrast ratio.
+- **TBM Deep Dark Titanium Burgundy Color Theme**: Ultra-dark iPhone Pro titanium burgundy variant (`#160509` uniform obsidian wine base) with electric rose (`#FF7597`) accents, crisp rose-cream (`#F5E8EB`) text, sage mint (`#A8E6CF`) strings, cornflower periwinkle (`#7EB7E8`) functions, and dusty mauve (`#A87682`) comments. Exceeds WCAG AAA with **16.63:1** contrast ratio.
+- **TBM Deep Dark Titanium Burgundy File Icons**: Dedicated file icon theme matching the Titanium Burgundy aesthetic, featuring brushed titanium wine closed folders (`#8A4456`), glowing electric rose open folders (`#FF7597`), and harmonized file glyphs.
 - **Renamed to TBM Theme**: Published by Aman Akhter ([https://github.com/amanAkhter](https://github.com/amanAkhter)).
 - **TBM Theme (Uniform Edition)**: Full 294 workbench color keys unified across all surfaces (`editor`, `editorGutter`, `sideBar`, `tabs`, `statusBar`, `activityBar`, `terminal`, `panel`, `minimap`, and `menu` all share base `#0A0A0A` with seamless `#0A0A0A` borders and signature `#80CBC4` teal accents).
 - **TBM Theme High Contrast**: Pure black `#000000` pitch base with crisp syntax highlighting and unified borders.

@@ -8,9 +8,11 @@
 - **Publisher GitHub**: [https://github.com/amanAkhter](https://github.com/amanAkhter)
 - **Extension Name**: `tbm-theme`
 - **Display Name**: `TBM Theme`
-- **Color Theme**: `TBM Theme` (`themes/tbm-theme.json`), `TBM Burgundy` (`themes/tbm-burgundy.json`), & `TBM Theme High Contrast` (`themes/tbm-theme-hc.json`)
+- **Color Theme**: `TBM Theme` (`themes/tbm-theme.json`), `TBM Deep Dark Titanium Burgundy` (`themes/tbm-burgundy.json`), & `TBM Theme High Contrast` (`themes/tbm-theme-hc.json`)
 - **Product Icon Theme**: `TBM Outline` (`icons/product-icon-theme.json` + `fonts/vira-ui-icons-outline.woff2`) (ID: `tbm-outline`)
-- **File Icon Theme**: `TBM Icons` (`icons/file-icon-theme.json` + `icons/files/` & `icons/folders/`) (ID: `tbm-icons`)
+- **File Icon Themes**:
+  - `TBM Icons` (`icons/file-icon-theme.json` + `icons/files/` & `icons/folders/`) (ID: `tbm-icons`)
+  - `TBM Deep Dark Titanium Burgundy File Icons` (`icons/file-icon-theme-burgundy.json` + `icons/burgundy/`) (ID: `tbm-burgundy-icons`)
 - **Architecture**: 100% declarative JSON configuration, **0 JavaScript runtime files**, offline, license-free, and update-resilient.
 
 ---

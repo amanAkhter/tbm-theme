@@ -43,6 +43,11 @@ export function applySettings() {
   const isApply = args.includes('--apply');
   const themeArgIdx = args.indexOf('--theme');
   const requestedTheme = (themeArgIdx !== -1 && args[themeArgIdx + 1]) ? args[themeArgIdx + 1] : 'TBM Theme';
+  const iconThemeArgIdx = args.indexOf('--icon-theme');
+  let requestedIconTheme = (iconThemeArgIdx !== -1 && args[iconThemeArgIdx + 1]) ? args[iconThemeArgIdx + 1] : null;
+  if (!requestedIconTheme) {
+    requestedIconTheme = requestedTheme.includes('Burgundy') ? 'tbm-burgundy-icons' : 'tbm-icons';
+  }
 
   console.log('=== TBM Theme Settings Manager ===\n');
 
@@ -69,7 +74,7 @@ export function applySettings() {
   const targetSettings = {
     'workbench.colorTheme': requestedTheme,
     'workbench.productIconTheme': 'tbm-outline',
-    'workbench.iconTheme': 'tbm-icons'
+    'workbench.iconTheme': requestedIconTheme
   };
 
   const diffs = [];

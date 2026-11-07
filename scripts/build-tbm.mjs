@@ -378,7 +378,7 @@ export function buildTbmThemes() {
     };
     const tbmBurgundyTheme = {
       $schema: 'vscode://schemas/color-theme',
-      name: 'TBM Burgundy',
+      name: 'TBM Deep Dark Titanium Burgundy',
       type: 'dark',
       semanticHighlighting: true,
       colors: burgundyMergedColors,

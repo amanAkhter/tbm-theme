@@ -121,11 +121,11 @@ function validateProductIcons() {
   return errors;
 }
 
-function validateFileIcons() {
+function validateFileIcons(themeFileName = 'file-icon-theme.json') {
   const errors = [];
-  const themePath = path.join(rootDir, 'icons', 'file-icon-theme.json');
+  const themePath = path.join(rootDir, 'icons', themeFileName);
   if (!fs.existsSync(themePath)) {
-    errors.push('icons/file-icon-theme.json not found');
+    errors.push(`icons/${themeFileName} not found`);
     return errors;
   }
 
@@ -133,16 +133,16 @@ function validateFileIcons() {
   const defs = theme.iconDefinitions || {};
   const defCount = Object.keys(defs).length;
 
-  console.log(`[validate] File icon definitions count: ${defCount}`);
+  console.log(`[validate] ${themeFileName} definitions count: ${defCount}`);
   if (defCount === 0) {
-    errors.push('File icon theme has 0 icon definitions');
+    errors.push(`${themeFileName} has 0 icon definitions`);
   }
 
   if (!theme.file || !defs[theme.file]) {
-    errors.push('File icon theme missing default "file" definition');
+    errors.push(`${themeFileName} missing default "file" definition`);
   }
   if (!theme.folder || !defs[theme.folder]) {
-    errors.push('File icon theme missing default "folder" definition');
+    errors.push(`${themeFileName} missing default "folder" definition`);
   }
 
   let missingCount = 0;
@@ -161,7 +161,7 @@ function validateFileIcons() {
   if (missingCount > 0) {
     errors.push(`Total missing icon files on disk: ${missingCount}`);
   } else {
-    console.log(`[validate] All ${defCount} icon files verified present on disk.`);
+    console.log(`[validate] All ${defCount} icon files in ${themeFileName} verified present on disk.`);
   }
 
   return errors;
@@ -218,14 +218,16 @@ export function validateAll() {
     console.log('[validate] Product icon font & definitions passed.');
   }
 
-  // 4. Validate file icons
-  const fileErrors = validateFileIcons();
-  if (fileErrors.length > 0) {
+  // 4. Validate file icons (Carbon & Burgundy)
+  const fileErrors = validateFileIcons('file-icon-theme.json');
+  const burgundyFileErrors = validateFileIcons('file-icon-theme-burgundy.json');
+  const combinedFileErrors = [...fileErrors, ...burgundyFileErrors];
+  if (combinedFileErrors.length > 0) {
     console.error('[validate] File icon errors:');
-    fileErrors.forEach((e) => console.error(`  - ${e}`));
+    combinedFileErrors.forEach((e) => console.error(`  - ${e}`));
     hasErrors = true;
   } else {
-    console.log('[validate] File icon mappings & SVGs verified.');
+    console.log('[validate] File icon mappings & SVGs verified for both icon suites.');
   }
 
   if (hasErrors) {
