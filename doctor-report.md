@@ -1,51 +1,54 @@
-# Antigravity IDE AST Health Audit Report: TBM Theme
+# TBM Theme Doctor Report
 
-*Generated on: 7 November 2026, 17:00:00 IST*
-*Host Environment: Antigravity IDE 1.107.0 (Darwin arm64)*
+*Generated on: 11/8/2026, 2:34:47 AM*
 
----
+## Environment
+- **Editor**: Antigravity IDE
+- **Version**: 1.107.0
+- **Underlying VS Code Base**: 1.107.0
+- **Engine Floor**: `^1.85.0`
+- **Status**: ✅ Compatible
 
-## 1. Host Environment Profile
-- **Target Editor**: Antigravity IDE
-- **Release Version**: `1.107.0`
-- **Underlying VS Code Engine Base**: `1.107.0`
-- **Engine Compatibility Range**: `^1.85.0`
-- **Compatibility Status**: ✅ **100% Fully Compatible**
-- **Binary Inspection Path**: `/Applications/Antigravity IDE.app/Contents/Resources/app/out/vs/workbench/workbench.desktop.main.js`
+## Registry Compatibility
+- **Our Defined Colors**: 294
+- **Editor Known Colors**: 906
+- **Stale Keys**: 0
+- **New / Unstyled Keys in Editor**: 612
 
----
+### Stale Keys (Set by us, but dropped by editor)
+- None. All defined keys are valid.
 
-## 2. Registry Compatibility & AST Audit
-
-| Metric | Measured Value | Threshold / Target | Status |
-|---|---|---|---|
-| **Theme Defined Workbench Colors** | 294 | > 250 | ✅ Passed |
-| **Editor Known Registered Colors** | 906 | Variable | ✅ Audited |
-| **Stale / Obsolete Theme Keys** | **0** | **0 required** | ✅ Zero Stale Keys |
-| **Editor Known Product Icon IDs** | 653 | Variable | ✅ Audited |
-| **Product Icons Defined (Outline)** | 183 | 183 required | ✅ 100% Coverage |
-| **File / Folder Definitions** | 393 | 393 required | ✅ 100% Mapped |
-| **Referenced Assets on Disk** | 393 / 393 | 100% | ✅ Zero Broken Paths |
-
----
-
-## 3. Stale Keys Audit (Deprecated in Host Editor)
-- **Status**: **Zero Stale Keys Detected**.
-- All deprecated or undocumented keys (`extensionButton.border`, `surface.border`, `agentsPanel.border`, etc.) were pruned during the build pass.
-
----
-
-## 4. Priority Unthemed Surfaces (Informational)
-The following keys are defined by newer Antigravity IDE agent and chat components. They gracefully inherit default fallback styles and can be styled in subsequent passes:
-- `chat.avatarBackground`
-- `chat.requestBackground`
+### Priority New Keys (Recommended to style in next pass)
+- `activityBar.activeFocusBorder`
+- `activityBar.dropBorder`
 - `agentSessionReadIndicator.foreground`
+- `chat.avatarBackground`
+- `chat.editedFileForeground`
 - `chat.linesAddedForeground`
 - `chat.linesRemovedForeground`
+- `chat.requestBackground`
+- `editor.compositionBorder`
+- `editor.findMatchForeground`
+- `editor.findRangeHighlightBorder`
+- `editor.focusedStackFrameHighlightBackground`
+- `editor.foldBackground`
+- `editor.foldPlaceholderForeground`
+- `editor.hoverHighlightBackground`
 - `editor.inactiveLineHighlightBackground`
+- `editor.inactiveSelectionBackground`
 - `editor.inlineValuesBackground`
+- `editor.inlineValuesForeground`
+- `editor.linkedEditingBackground`
+- `editor.placeholder.foreground`
+- `editor.rangeHighlightBackground`
+- `editor.rangeHighlightBorder`
+- `editor.selectionHighlightBorder`
+- `editor.snippetFinalTabstopHighlightBackground`
+- `editor.snippetFinalTabstopHighlightBorder`
+- `editor.snippetTabstopHighlightBackground`
+- `editor.snippetTabstopHighlightBorder`
+- `editor.stackFrameHighlightBackground`
+- `editor.symbolHighlightBackground`
 
----
-
-## 5. Final Health Verdict
-✅ **HEALTHY & UPDATE RESILIENT**: Zero breaking stale keys, zero runtime script overhead, and full declarative compatibility with Antigravity IDE 1.107.0+.
+## Health Verdict
+⚠️ **HEALTHY WITH WARNINGS**: Minor unthemed surfaces detected.

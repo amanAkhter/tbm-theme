@@ -347,13 +347,13 @@ export function buildTbmThemes() {
   const themesDir = path.join(rootDir, 'themes');
   fs.mkdirSync(themesDir, { recursive: true });
 
-  const carbonSrc = path.join(themesDir, 'vira-carbon.json');
-  const hcSrc = path.join(themesDir, 'vira-carbon-hc.json');
+  const themeSrc = path.join(themesDir, 'tbm-theme.json');
+  const hcSrc = path.join(themesDir, 'tbm-theme-hc.json');
 
-  if (fs.existsSync(carbonSrc)) {
-    const rawCarbon = JSON.parse(fs.readFileSync(carbonSrc, 'utf8'));
+  if (fs.existsSync(themeSrc)) {
+    const rawTheme = JSON.parse(fs.readFileSync(themeSrc, 'utf8'));
     const mergedColors = {
-      ...rawCarbon.colors,
+      ...rawTheme.colors,
       ...UNIFORM_CARBON_OVERRIDES
     };
     for (const k of STALE_KEYS) delete mergedColors[k];
@@ -365,15 +365,11 @@ export function buildTbmThemes() {
       type: 'dark',
       semanticHighlighting: true,
       colors: mergedColors,
-      tokenColors: rawCarbon.tokenColors,
-      semanticTokenColors: rawCarbon.semanticTokenColors
+      tokenColors: rawTheme.tokenColors,
+      semanticTokenColors: rawTheme.semanticTokenColors
     };
     fs.writeFileSync(path.join(themesDir, 'tbm-theme.json'), JSON.stringify(tbmTheme, null, 2) + '\n', 'utf8');
     console.log(`[build-tbm] Generated themes/tbm-theme.json (${Object.keys(tbmTheme.colors).length} colors)`);
-
-    // Keep vira-carbon.json in sync
-    const viraTheme = { ...tbmTheme, name: 'Vira Carbon' };
-    fs.writeFileSync(path.join(themesDir, 'vira-carbon.json'), JSON.stringify(viraTheme, null, 2) + '\n', 'utf8');
 
     // 2. TBM Burgundy Variant
     const burgundyMergedColors = {
@@ -386,8 +382,8 @@ export function buildTbmThemes() {
       type: 'dark',
       semanticHighlighting: true,
       colors: burgundyMergedColors,
-      tokenColors: transformTokensForBurgundy(rawCarbon.tokenColors),
-      semanticTokenColors: transformSemanticTokensForBurgundy(rawCarbon.semanticTokenColors)
+      tokenColors: transformTokensForBurgundy(rawTheme.tokenColors),
+      semanticTokenColors: transformSemanticTokensForBurgundy(rawTheme.semanticTokenColors)
     };
     fs.writeFileSync(path.join(themesDir, 'tbm-burgundy.json'), JSON.stringify(tbmBurgundyTheme, null, 2) + '\n', 'utf8');
     console.log(`[build-tbm] Generated themes/tbm-burgundy.json (${Object.keys(tbmBurgundyTheme.colors).length} colors)`);
@@ -413,10 +409,6 @@ export function buildTbmThemes() {
     };
     fs.writeFileSync(path.join(themesDir, 'tbm-theme-hc.json'), JSON.stringify(tbmHcTheme, null, 2) + '\n', 'utf8');
     console.log(`[build-tbm] Generated themes/tbm-theme-hc.json (${Object.keys(tbmHcTheme.colors).length} colors)`);
-
-    // Keep vira-carbon-hc.json in sync
-    const viraHcTheme = { ...tbmHcTheme, name: 'Vira Carbon High Contrast' };
-    fs.writeFileSync(path.join(themesDir, 'vira-carbon-hc.json'), JSON.stringify(viraHcTheme, null, 2) + '\n', 'utf8');
   }
 }
 

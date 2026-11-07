@@ -1,5 +1,5 @@
 // scripts/apply-settings.mjs
-// Safely previews or pins Vira Carbon theme & icons in Antigravity settings.json
+// Safely previews or pins TBM Theme & icons in Antigravity settings.json
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -215,8 +215,7 @@ export function applySettings() {
   updated['workbench.colorCustomizations'] = {
     ...(currentSettings['workbench.colorCustomizations'] || {}),
     '[TBM Theme]': uniformCustomization,
-    '[TBM Burgundy]': burgundyCustomization,
-    '[Vira Carbon]': uniformCustomization
+    '[TBM Burgundy]': burgundyCustomization
   };
 
   fs.writeFileSync(settingsPath, JSON.stringify(updated, null, 2) + '\n', 'utf8');

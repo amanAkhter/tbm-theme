@@ -158,9 +158,8 @@ agy-ide --install-extension tbm-theme-2026.9.6.vsix --force
 │
 ├── themes/
 │   ├── tbm-theme.json             # 294 compiled colors: uniform #0A0A0A surfaces & borders
-│   ├── tbm-theme-hc.json          # High-contrast pitch black variant (#000000)
-│   ├── vira-carbon.json           # Backward-compatible alias
-│   └── vira-carbon-hc.json        # Backward-compatible alias
+│   ├── tbm-burgundy.json          # 294 compiled colors: uniform #27060f deep wine base, rose accents
+│   └── tbm-theme-hc.json          # High-contrast pitch black variant (#000000)
 │
 ├── fonts/
 │   └── vira-ui-icons-outline.woff2# Authentic outline WOFF2 font (15.65 KB)

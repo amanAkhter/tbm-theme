@@ -40,11 +40,6 @@
         "label": "TBM Theme High Contrast",
         "uiTheme": "hc-black",
         "path": "./themes/tbm-theme-hc.json"
-      },
-      {
-        "label": "Vira Carbon",
-        "uiTheme": "vs-dark",
-        "path": "./themes/tbm-theme.json"
       }
     ],
     "productIconThemes": [
@@ -52,22 +47,12 @@
         "id": "tbm-outline",
         "label": "TBM Outline",
         "path": "./icons/product-icon-theme.json"
-      },
-      {
-        "id": "viraOutline",
-        "label": "Vira Outline",
-        "path": "./icons/product-icon-theme.json"
       }
     ],
     "iconThemes": [
       {
         "id": "tbm-icons",
         "label": "TBM Icons",
-        "path": "./icons/file-icon-theme.json"
-      },
-      {
-        "id": "vira-icons-carbon",
-        "label": "vira icons carbon",
         "path": "./icons/file-icon-theme.json"
       }
     ]

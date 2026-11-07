@@ -130,7 +130,7 @@ export function extractRegistrations(mainJsPath, version) {
 }
 
 export function runDoctor() {
-  console.log('=== Carbonline Doctor ===\n');
+  console.log('=== TBM Theme Doctor ===\n');
 
   const appPath = findEditorPath();
   if (!appPath) {
