@@ -72,86 +72,6 @@ export function applySettings() {
     'workbench.iconTheme': 'tbm-icons'
   };
 
-  const uniformCustomization = {
-    'editor.background': '#0A0A0A',
-    'editorGutter.background': '#0A0A0A',
-    'statusBar.background': '#0A0A0A',
-    'activityBar.background': '#0A0A0A',
-    'tab.activeBackground': '#0A0A0A',
-    'breadcrumb.background': '#0A0A0A',
-    'banner.background': '#0A0A0A',
-    'sideBar.background': '#0A0A0A',
-    'tab.inactiveBackground': '#0A0A0A',
-    'terminal.background': '#0A0A0A',
-    'editorGroupHeader.tabsBackground': '#0A0A0A',
-    'activityBar.activeBackground': '#0A0A0A',
-    'activityBar.foreground': '#80CBC4',
-    'menu.background': '#0A0A0A',
-    'titleBar.activeBackground': '#0A0A0A',
-    'titleBar.inactiveForeground': '#56575D',
-    'minimap.background': '#0A0A0A',
-    'editorGroup.border': '#0A0A0A',
-    'editorGroupHeader.tabsBorder': '#0A0A0A',
-    'sideBar.border': '#0A0A0A',
-    'statusBar.border': '#0A0A0A',
-    'activityBar.border': '#0A0A0A',
-    'titleBar.border': '#0A0A0A',
-    'menu.border': '#0A0A0A',
-    'tab.border': '#0A0A0A',
-    'tab.activeBorder': '#0A0A0A',
-    'editorOverviewRuler.border': '#0A0A0A',
-    'notebook.cellBorderColor': '#0A0A0A',
-    'editor.lineHighlightBorder': '#0A0A0A',
-    'editorStickyScroll.border': '#0A0A0A',
-    'tab.activeBorderTop': '#80CBC4',
-    'activityBar.activeBorder': '#80CBC4',
-    'panel.border': '#0A0A0A',
-    'panel.background': '#0A0A0A',
-    'terminal.tab.activeBorder': '#80CBC4',
-    'badge.background': '#80CBC4',
-    'badge.foreground': '#0A0A0A'
-  };
-
-  const burgundyCustomization = {
-    'editor.background': '#27060f',
-    'editorGutter.background': '#27060f',
-    'statusBar.background': '#27060f',
-    'activityBar.background': '#27060f',
-    'tab.activeBackground': '#27060f',
-    'breadcrumb.background': '#27060f',
-    'banner.background': '#27060f',
-    'sideBar.background': '#27060f',
-    'tab.inactiveBackground': '#27060f',
-    'terminal.background': '#27060f',
-    'editorGroupHeader.tabsBackground': '#27060f',
-    'activityBar.activeBackground': '#27060f',
-    'activityBar.foreground': '#FF7597',
-    'menu.background': '#27060f',
-    'titleBar.activeBackground': '#27060f',
-    'titleBar.inactiveForeground': '#8A606B',
-    'minimap.background': '#27060f',
-    'editorGroup.border': '#27060f',
-    'editorGroupHeader.tabsBorder': '#27060f',
-    'sideBar.border': '#27060f',
-    'statusBar.border': '#27060f',
-    'activityBar.border': '#27060f',
-    'titleBar.border': '#27060f',
-    'menu.border': '#27060f',
-    'tab.border': '#27060f',
-    'tab.activeBorder': '#27060f',
-    'editorOverviewRuler.border': '#27060f',
-    'notebook.cellBorderColor': '#27060f',
-    'editor.lineHighlightBorder': '#27060f',
-    'editorStickyScroll.border': '#27060f',
-    'tab.activeBorderTop': '#FF7597',
-    'activityBar.activeBorder': '#FF7597',
-    'panel.border': '#27060f',
-    'panel.background': '#27060f',
-    'terminal.tab.activeBorder': '#FF7597',
-    'badge.background': '#FF7597',
-    'badge.foreground': '#27060f'
-  };
-
   const diffs = [];
   let hasChanges = false;
 
@@ -167,17 +87,24 @@ export function applySettings() {
     }
   }
 
-  // Check colorCustomizations
-  const currentColorCustomizations = currentSettings['workbench.colorCustomizations'] || {};
-  const currentTbmCustomization = currentColorCustomizations['[TBM Theme]'];
-  const customizationsDiffer = JSON.stringify(currentTbmCustomization) !== JSON.stringify(uniformCustomization);
-  if (customizationsDiffer) {
-    hasChanges = true;
-    diffs.push({
-      key: 'workbench.colorCustomizations["[TBM Theme]"]',
-      current: currentTbmCustomization ? '(customized)' : '(unset)',
-      target: '(uniform dark surface rules)'
-    });
+  // Clean up any redundant colorCustomizations since they are natively compiled into the theme VSIX
+  const colorCustomizations = currentSettings['workbench.colorCustomizations'];
+  let cleanColorCustomizations = null;
+  if (colorCustomizations && typeof colorCustomizations === 'object') {
+    const keysToRemove = ['[TBM Theme]', '[TBM Burgundy]', '[Vira Carbon]'];
+    const foundKeys = keysToRemove.filter((k) => k in colorCustomizations);
+    if (foundKeys.length > 0) {
+      hasChanges = true;
+      cleanColorCustomizations = { ...colorCustomizations };
+      for (const k of foundKeys) {
+        delete cleanColorCustomizations[k];
+        diffs.push({
+          key: `workbench.colorCustomizations["${k}"]`,
+          current: '(redundant overrides)',
+          target: '(removed - native in theme VSIX)'
+        });
+      }
+    }
   }
 
   if (!hasChanges) {
@@ -185,7 +112,8 @@ export function applySettings() {
     for (const [key, targetVal] of Object.entries(targetSettings)) {
       console.log(`  "${key}": "${targetVal}"`);
     }
-    console.log('\nNo changes required. (Idempotent)');
+    console.log('\nAll uniform surfaces and accents are natively baked into the VSIX extension.');
+    console.log('No settings.json color overrides required. (100% portable)');
     return;
   }
 
@@ -212,14 +140,17 @@ export function applySettings() {
 
   // Apply Changes
   const updated = { ...currentSettings, ...targetSettings };
-  updated['workbench.colorCustomizations'] = {
-    ...(currentSettings['workbench.colorCustomizations'] || {}),
-    '[TBM Theme]': uniformCustomization,
-    '[TBM Burgundy]': burgundyCustomization
-  };
+  if (cleanColorCustomizations !== null) {
+    if (Object.keys(cleanColorCustomizations).length === 0) {
+      delete updated['workbench.colorCustomizations'];
+    } else {
+      updated['workbench.colorCustomizations'] = cleanColorCustomizations;
+    }
+  }
 
   fs.writeFileSync(settingsPath, JSON.stringify(updated, null, 2) + '\n', 'utf8');
   console.log('[apply-settings] Successfully updated settings.json!');
+  console.log('[apply-settings] All theme surfaces and icons are native to the VSIX.');
   console.log('[apply-settings] Please reload Antigravity IDE (Cmd+Shift+P -> "Developer: Reload Window").');
 }
 
