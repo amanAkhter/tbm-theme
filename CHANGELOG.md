@@ -3,6 +3,7 @@
 ## [2026.9.6] - 2026-11-07
 
 ### Added
+- **TBM Burgundy Color Theme Variant**: New luxurious deep wine velvet variant (`#27060f` uniform base) with electric rose (`#FF7597`) accents, warm cream (`#F1E4E8`) text, sage mint (`#A8D5BA`) strings, periwinkle (`#7EB7E8`) functions, and dusty mauve (`#B37D8A`) comments. Exceeds WCAG AAA with **15.19:1** contrast ratio.
 - **Renamed to TBM Theme**: Published by Aman Akhter ([https://github.com/amanAkhter](https://github.com/amanAkhter)).
 - **TBM Theme (Uniform Edition)**: Full 294 workbench color keys unified across all surfaces (`editor`, `editorGutter`, `sideBar`, `tabs`, `statusBar`, `activityBar`, `terminal`, `panel`, `minimap`, and `menu` all share base `#0A0A0A` with seamless `#0A0A0A` borders and signature `#80CBC4` teal accents). Also aliased as `Vira Carbon`.
 - **TBM Theme High Contrast**: Pure black `#000000` pitch base with crisp syntax highlighting and unified borders.

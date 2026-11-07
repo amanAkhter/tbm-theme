@@ -182,7 +182,20 @@ export function validateAll() {
     console.log('[validate] TBM Theme validation passed.');
   }
 
-  // 2. Validate TBM HC theme
+  // 2. Validate TBM Burgundy theme
+  const burgundyPath = path.join(rootDir, 'themes', 'tbm-burgundy.json');
+  if (fs.existsSync(burgundyPath)) {
+    const burgundyErrors = validateThemeJson(burgundyPath);
+    if (burgundyErrors.length > 0) {
+      console.error('[validate] TBM Burgundy theme errors:');
+      burgundyErrors.forEach((e) => console.error(`  - ${e}`));
+      hasErrors = true;
+    } else {
+      console.log('[validate] TBM Burgundy theme validation passed.');
+    }
+  }
+
+  // 3. Validate TBM HC theme
   const hcPath = path.join(rootDir, 'themes', 'tbm-theme-hc.json');
   if (fs.existsSync(hcPath)) {
     const hcErrors = validateThemeJson(hcPath);

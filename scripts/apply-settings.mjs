@@ -41,8 +41,10 @@ function parseJsonc(text) {
 export function applySettings() {
   const args = process.argv.slice(2);
   const isApply = args.includes('--apply');
+  const themeArgIdx = args.indexOf('--theme');
+  const requestedTheme = (themeArgIdx !== -1 && args[themeArgIdx + 1]) ? args[themeArgIdx + 1] : 'TBM Theme';
 
-  console.log('=== Vira Carbon Settings Manager ===\n');
+  console.log('=== TBM Theme Settings Manager ===\n');
 
   const settingsPath = findSettingsPath();
   if (!settingsPath) {
@@ -52,6 +54,7 @@ export function applySettings() {
   }
 
   console.log(`Settings File: ${settingsPath}`);
+  console.log(`Target Theme:  ${requestedTheme}`);
   console.log(`Mode:          ${isApply ? 'APPLY (Modifying settings)' : 'DRY RUN (Preview only)'}\n`);
 
   const rawContent = fs.readFileSync(settingsPath, 'utf8');
@@ -64,7 +67,7 @@ export function applySettings() {
   }
 
   const targetSettings = {
-    'workbench.colorTheme': 'TBM Theme',
+    'workbench.colorTheme': requestedTheme,
     'workbench.productIconTheme': 'tbm-outline',
     'workbench.iconTheme': 'tbm-icons'
   };
@@ -107,6 +110,46 @@ export function applySettings() {
     'terminal.tab.activeBorder': '#80CBC4',
     'badge.background': '#80CBC4',
     'badge.foreground': '#0A0A0A'
+  };
+
+  const burgundyCustomization = {
+    'editor.background': '#27060f',
+    'editorGutter.background': '#27060f',
+    'statusBar.background': '#27060f',
+    'activityBar.background': '#27060f',
+    'tab.activeBackground': '#27060f',
+    'breadcrumb.background': '#27060f',
+    'banner.background': '#27060f',
+    'sideBar.background': '#27060f',
+    'tab.inactiveBackground': '#27060f',
+    'terminal.background': '#27060f',
+    'editorGroupHeader.tabsBackground': '#27060f',
+    'activityBar.activeBackground': '#27060f',
+    'activityBar.foreground': '#FF7597',
+    'menu.background': '#27060f',
+    'titleBar.activeBackground': '#27060f',
+    'titleBar.inactiveForeground': '#8A606B',
+    'minimap.background': '#27060f',
+    'editorGroup.border': '#27060f',
+    'editorGroupHeader.tabsBorder': '#27060f',
+    'sideBar.border': '#27060f',
+    'statusBar.border': '#27060f',
+    'activityBar.border': '#27060f',
+    'titleBar.border': '#27060f',
+    'menu.border': '#27060f',
+    'tab.border': '#27060f',
+    'tab.activeBorder': '#27060f',
+    'editorOverviewRuler.border': '#27060f',
+    'notebook.cellBorderColor': '#27060f',
+    'editor.lineHighlightBorder': '#27060f',
+    'editorStickyScroll.border': '#27060f',
+    'tab.activeBorderTop': '#FF7597',
+    'activityBar.activeBorder': '#FF7597',
+    'panel.border': '#27060f',
+    'panel.background': '#27060f',
+    'terminal.tab.activeBorder': '#FF7597',
+    'badge.background': '#FF7597',
+    'badge.foreground': '#27060f'
   };
 
   const diffs = [];
@@ -172,6 +215,7 @@ export function applySettings() {
   updated['workbench.colorCustomizations'] = {
     ...(currentSettings['workbench.colorCustomizations'] || {}),
     '[TBM Theme]': uniformCustomization,
+    '[TBM Burgundy]': burgundyCustomization,
     '[Vira Carbon]': uniformCustomization
   };
 

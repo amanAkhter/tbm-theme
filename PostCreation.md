@@ -8,7 +8,7 @@
 - **Publisher GitHub**: [https://github.com/amanAkhter](https://github.com/amanAkhter)
 - **Extension Name**: `tbm-theme`
 - **Display Name**: `TBM Theme`
-- **Color Theme**: `TBM Theme` (`themes/tbm-theme.json`) & `TBM Theme High Contrast` (`themes/tbm-theme-hc.json`) (also aliased as `Vira Carbon`)
+- **Color Theme**: `TBM Theme` (`themes/tbm-theme.json`), `TBM Burgundy` (`themes/tbm-burgundy.json`), & `TBM Theme High Contrast` (`themes/tbm-theme-hc.json`) (also aliased as `Vira Carbon`)
 - **Product Icon Theme**: `TBM Outline` (`icons/product-icon-theme.json` + `fonts/vira-ui-icons-outline.woff2`) (ID: `tbm-outline` / `viraOutline`)
 - **File Icon Theme**: `TBM Icons` (`icons/file-icon-theme.json` + `icons/files/` & `icons/folders/`) (ID: `tbm-icons` / `vira-icons-carbon`)
 - **Architecture**: 100% declarative JSON configuration, **0 JavaScript runtime files**, offline, license-free, and update-resilient.
@@ -104,6 +104,7 @@ In default themes, contrasting borders and undefined surface backgrounds create 
 │
 ├── themes/
 │   ├── tbm-theme.json             # 294 colors: uniform #0A0A0A planes, seamless borders, WCAG 14:1 contrast
+│   ├── tbm-burgundy.json          # 294 colors: uniform #27060f deep wine base, rose accents, WCAG 15.19:1 contrast
 │   ├── tbm-theme-hc.json          # High-contrast pitch black (#000000) variant
 │   ├── vira-carbon.json           # Backward-compatible alias
 │   └── vira-carbon-hc.json        # Backward-compatible alias

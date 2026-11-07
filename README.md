@@ -37,6 +37,7 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 | Component | Identifier | Details |
 |---|---|---|
 | **Color Theme (Default)** | `TBM Theme` | 294 colors, `#0A0A0A` uniform base, `#80CBC4` teal accents |
+| **Color Theme (Burgundy)**| `TBM Burgundy` | 294 colors, `#27060f` deep wine velvet base, `#FF7597` rose accents |
 | **Color Theme (High Contrast)**| `TBM Theme High Contrast` | Pure `#000000` pitch base, high-contrast syntax highlighting |
 | **Product Icon Theme** | `TBM Outline` (`tbm-outline`) | 183 fine outline UI glyphs powered by bundled WOFF2 font |
 | **File Icon Theme** | `TBM Icons` (`tbm-icons`) | 393 file & folder definitions with authentic carbon SVGs |
@@ -45,19 +46,22 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 
 ## 3. Design Token Architecture & Color Math
 
-### 3.1 Core Palette
-| Token | Hex Value | Luminance | Purpose |
+### 3.1 Core Palette (TBM Theme & TBM Burgundy)
+| Token | TBM Theme | TBM Burgundy | Purpose |
 |---|---|---|---|
-| `surface.base` | `#0A0A0A` | `0.0031` | Unified background for editor, sidebar, tabs, terminal |
-| `surface.border`| `#0A0A0A` | `0.0031` | Seamless border plane between all editor groups |
-| `text.primary` | `#D9D9D9` | `0.6868` | High-legibility primary text & syntax foreground |
-| `text.muted` | `#56575D` | `0.0984` | Dimmed inactive headers, line numbers, and breadcrumbs |
-| `accent.primary`| `#80CBC4` | `0.5241` | Electric teal focal indicators, active borders, and badges |
+| `surface.base` | `#0A0A0A` | `#27060f` | Unified background for editor, sidebar, tabs, terminal |
+| `surface.border`| `#0A0A0A` | `#27060f` | Seamless border plane between all editor groups |
+| `text.primary` | `#D9D9D9` | `#F1E4E8` | High-legibility primary text & syntax foreground |
+| `text.muted` | `#56575D` | `#8A606B` | Dimmed inactive headers, line numbers, and breadcrumbs |
+| `accent.primary`| `#80CBC4` | `#FF7597` | Focal indicators, active borders, and badges |
 
 ### 3.2 WCAG Contrast Compliance
-$$\text{Contrast Ratio} = \frac{L_{\text{text}} + 0.05}{L_{\text{background}} + 0.05} = \frac{0.6868 + 0.05}{0.0031 + 0.05} = \mathbf{14.03 : 1}$$
+- **TBM Theme**: $CR = \frac{0.6868 + 0.05}{0.0031 + 0.05} = \mathbf{14.03 : 1}$ (WCAG AAA)
+- **TBM Burgundy**: $CR = \frac{0.7853 + 0.05}{0.0059 + 0.05} = \mathbf{15.19 : 1}$ (WCAG AAA)
 
 - **WCAG Level AA Threshold**: $\ge 4.5:1$
+- **WCAG Level AAA Threshold**: $\ge 7.0:1$
+- **TBM Theme Performance**: Both variants exceed WCAG AAA requirements by over 100%.
 - **WCAG Level AAA Threshold**: $\ge 7.0:1$
 - **TBM Theme Result**: **14.03:1 (Exceeds WCAG AAA by 100%)**
 

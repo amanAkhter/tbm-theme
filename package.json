@@ -32,6 +32,11 @@
         "path": "./themes/tbm-theme.json"
       },
       {
+        "label": "TBM Burgundy",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tbm-burgundy.json"
+      },
+      {
         "label": "TBM Theme High Contrast",
         "uiTheme": "hc-black",
         "path": "./themes/tbm-theme-hc.json"
