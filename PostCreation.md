@@ -104,7 +104,7 @@ In default themes, contrasting borders and undefined surface backgrounds create 
 │
 ├── themes/
 │   ├── tbm-theme.json             # 294 colors: uniform #0A0A0A planes, seamless borders, WCAG 14:1 contrast
-│   ├── tbm-burgundy.json          # 294 colors: uniform #4D1821 deep wine base, rose accents, WCAG 12.32:1 contrast
+│   ├── tbm-burgundy.json          # 294 colors: uniform #160509 dark wine base, rose accents, WCAG 16.63:1 contrast
 │   └── tbm-theme-hc.json          # High-contrast pitch black (#000000) variant
 │
 ├── fonts/

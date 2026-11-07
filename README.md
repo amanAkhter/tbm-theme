@@ -37,7 +37,7 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 | Component | Identifier | Details |
 |---|---|---|
 | **Color Theme (Default)** | `TBM Theme` | 294 colors, `#0A0A0A` uniform base, `#80CBC4` teal accents |
-| **Color Theme (Burgundy)**| `TBM Burgundy` | 294 colors, `#4D1821` deep wine base, `#FF7597` rose accents |
+| **Color Theme (Burgundy)**| `TBM Burgundy` | 294 colors, `#160509` iPhone Pro dark titanium wine base, `#FF7597` rose accents |
 | **Color Theme (High Contrast)**| `TBM Theme High Contrast` | Pure `#000000` pitch base, high-contrast syntax highlighting |
 | **Product Icon Theme** | `TBM Outline` (`tbm-outline`) | 183 fine outline UI glyphs powered by bundled WOFF2 font |
 | **File Icon Theme** | `TBM Icons` (`tbm-icons`) | 393 file & folder definitions with authentic carbon SVGs |
@@ -49,10 +49,10 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 ### 3.1 Core Palette (TBM Theme & TBM Burgundy)
 | Token | TBM Theme | TBM Burgundy | Purpose |
 |---|---|---|---|
-| `surface.base` | `#0A0A0A` | `#4D1821` | Unified background for editor, sidebar, tabs, terminal |
-| `surface.border`| `#0A0A0A` | `#4D1821` | Seamless border plane between all editor groups |
-| `text.primary` | `#D9D9D9` | `#F7EBEF` | High-legibility primary text & syntax foreground |
-| `text.muted` | `#56575D` | `#B88A94` | Dimmed inactive headers, line numbers, and breadcrumbs |
+| `surface.base` | `#0A0A0A` | `#160509` | Unified background for editor, sidebar, tabs, terminal |
+| `surface.border`| `#0A0A0A` | `#160509` | Seamless border plane between all editor groups |
+| `text.primary` | `#D9D9D9` | `#F5E8EB` | High-legibility primary text & syntax foreground |
+| `text.muted` | `#56575D` | `#9E6E78` | Dimmed inactive headers, line numbers, and breadcrumbs |
 | `accent.primary`| `#80CBC4` | `#FF7597` | Focal indicators, active borders, and badges |
 
 ### 3.2 WCAG Contrast Compliance
@@ -158,7 +158,7 @@ agy-ide --install-extension tbm-theme-2026.9.6.vsix --force
 │
 ├── themes/
 │   ├── tbm-theme.json             # 294 compiled colors: uniform #0A0A0A surfaces & borders
-│   ├── tbm-burgundy.json          # 294 compiled colors: uniform #4D1821 deep wine base, rose accents
+│   ├── tbm-burgundy.json          # 294 compiled colors: uniform #160509 dark wine base, rose accents
 │   └── tbm-theme-hc.json          # High-contrast pitch black variant (#000000)
 │
 ├── fonts/

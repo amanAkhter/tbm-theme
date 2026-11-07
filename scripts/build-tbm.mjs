@@ -121,16 +121,16 @@ const UNIFORM_HC_OVERRIDES = {
   'panel.border': '#000000'
 };
 
-// TBM Burgundy Palette (#4D1821 Base Surface)
-const BURGUNDY_BASE = '#4D1821';
-const BURGUNDY_ELEVATED = '#5E202C';
-const BURGUNDY_SELECTION = '#6F2734';
+// TBM Burgundy Palette (Deep iPhone Pro Dark Titanium Burgundy #160509 Base Surface)
+const BURGUNDY_BASE = '#160509';
+const BURGUNDY_ELEVATED = '#250B12';
+const BURGUNDY_SELECTION = '#3B121E';
 const BURGUNDY_ACCENT = '#FF7597';
 const BURGUNDY_ACCENT_HOVER = '#FF8DA1';
-const BURGUNDY_TEXT = '#F7EBEF';
-const BURGUNDY_MUTED = '#B88A94';
-const BURGUNDY_SUBTLE = '#8A505C';
-const BURGUNDY_BORDER = '#4D1821';
+const BURGUNDY_TEXT = '#F5E8EB';
+const BURGUNDY_MUTED = '#9E6E78';
+const BURGUNDY_SUBTLE = '#5E2B36';
+const BURGUNDY_BORDER = '#160509';
 
 const UNIFORM_BURGUNDY_OVERRIDES = {
   // Uniform Background Surfaces
@@ -256,13 +256,13 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   // Editor Selections, Cursor & Guides
   'editor.selectionBackground': '#FF759740',
   'editor.selectionHighlightBackground': '#FF759726',
-  'editor.lineHighlightBackground': '#5E202C55',
+  'editor.lineHighlightBackground': '#250B1266',
   'editorCursor.foreground': BURGUNDY_ACCENT,
   'editorCursor.background': BURGUNDY_BASE,
-  'editorWhitespace.foreground': '#6E2D3B',
-  'editorIndentGuide.background': '#5C222E',
-  'editorIndentGuide.activeBackground': '#8F384B',
-  'editorRuler.foreground': '#5C222E',
+  'editorWhitespace.foreground': '#421622',
+  'editorIndentGuide.background': '#2E0E17',
+  'editorIndentGuide.activeBackground': '#5E202E',
+  'editorRuler.foreground': '#2E0E17',
   'scrollbarSlider.background': '#FF759726',
   'scrollbarSlider.hoverBackground': '#FF759740',
   'scrollbarSlider.activeBackground': '#FF759780',
@@ -272,7 +272,7 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   'terminal.ansiRed': '#FF6B8B',
   'terminal.ansiGreen': '#A8E6CF',
   'terminal.ansiYellow': '#FFB86C',
-  'terminal.ansiBlue': '#85BFF3',
+  'terminal.ansiBlue': '#7EB7E8',
   'terminal.ansiMagenta': '#E6A8FF',
   'terminal.ansiCyan': '#A5DEFF',
   'terminal.ansiWhite': BURGUNDY_TEXT,
@@ -298,18 +298,18 @@ const STALE_KEYS = new Set([
 // Syntax color mapping for Burgundy aesthetic
 function transformTokensForBurgundy(tokens) {
   const tokenMap = {
-    '#D9D9D9': BURGUNDY_TEXT, // Soft warm rose-cream base text (12.32:1 AAA)
-    '#a3c679': '#A8E6CF',     // Sage mint strings (10.14:1 AAA)
-    '#6ebad7': '#FF7597',     // Electric rose keywords / tags (5.61:1 AA)
-    '#d6808f': '#FFB86C',     // Warm amber booleans (8.39:1 AAA)
-    '#cd775c': '#FFB86C',     // Warm amber numbers (8.39:1 AAA)
-    '#6a90d0': '#85BFF3',     // Soft periwinkle functions (7.42:1 AAA)
-    '#a178c4': '#E6A8FF',     // Lavender storage (9.20:1 AAA)
-    '#c85e60': '#FF7597',     // Rose methods/keys (5.61:1 AA)
-    '#d5b05f': '#E5C07B',     // Golden champagne types/classes (8.28:1 AAA)
-    '#45454A': '#BD8C98',     // Dusty mauve comments (5.02:1 AA)
+    '#D9D9D9': BURGUNDY_TEXT, // Crisp warm rose-cream (16.63:1 AAA)
+    '#a3c679': '#A8E6CF',     // Sage mint strings (14.05:1 AAA)
+    '#6ebad7': '#FF7597',     // Electric rose keywords / tags (7.78:1 AAA)
+    '#d6808f': '#FFB86C',     // Warm amber booleans (11.63:1 AAA)
+    '#cd775c': '#FFB86C',     // Warm amber numbers (11.63:1 AAA)
+    '#6a90d0': '#7EB7E8',     // Cornflower periwinkle functions (9.27:1 AAA)
+    '#a178c4': '#E6A8FF',     // Lavender storage (11.50:1 AAA)
+    '#c85e60': '#FF7597',     // Rose methods/keys (7.78:1 AAA)
+    '#d5b05f': '#E5C07B',     // Golden champagne types/classes (11.47:1 AAA)
+    '#45454A': '#A87682',     // Dusty mauve comments (5.26:1 AA)
     '#7d5e49': '#C4929E',     // Muted rose
-    '#90a9bc': '#9ECBFF',     // Soft ice blue properties (8.47:1 AAA)
+    '#90a9bc': '#9ECBFF',     // Soft ice blue properties (11.74:1 AAA)
     '#D9D9D9e6': `${BURGUNDY_TEXT}e6`
   };
 
@@ -330,9 +330,9 @@ function transformSemanticTokensForBurgundy(semantic) {
     '#D9D9D9': BURGUNDY_TEXT,
     '#d5b05f': '#E5C07B',
     '#cd775c': '#FFB86C',
-    '#6a90d0': '#85BFF3',
+    '#6a90d0': '#7EB7E8',
     '#90a9bc': '#9ECBFF',
-    '#45454A': '#BD8C98',
+    '#45454A': '#A87682',
     '#a3c679': '#A8E6CF'
   };
 
