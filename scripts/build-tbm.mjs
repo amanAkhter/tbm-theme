@@ -121,16 +121,16 @@ const UNIFORM_HC_OVERRIDES = {
   'panel.border': '#000000'
 };
 
-// TBM Burgundy Palette (#27060f Base Surface)
-const BURGUNDY_BASE = '#27060f';
-const BURGUNDY_ELEVATED = '#360C18';
-const BURGUNDY_SELECTION = '#4A1422';
+// TBM Burgundy Palette (#4D1821 Base Surface)
+const BURGUNDY_BASE = '#4D1821';
+const BURGUNDY_ELEVATED = '#5E202C';
+const BURGUNDY_SELECTION = '#6F2734';
 const BURGUNDY_ACCENT = '#FF7597';
 const BURGUNDY_ACCENT_HOVER = '#FF8DA1';
-const BURGUNDY_TEXT = '#F1E4E8';
-const BURGUNDY_MUTED = '#8A606B';
-const BURGUNDY_SUBTLE = '#6B3B48';
-const BURGUNDY_BORDER = '#27060f';
+const BURGUNDY_TEXT = '#F7EBEF';
+const BURGUNDY_MUTED = '#B88A94';
+const BURGUNDY_SUBTLE = '#8A505C';
+const BURGUNDY_BORDER = '#4D1821';
 
 const UNIFORM_BURGUNDY_OVERRIDES = {
   // Uniform Background Surfaces
@@ -200,17 +200,17 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   // Text & Foregrounds
   'foreground': BURGUNDY_TEXT,
   'editor.foreground': BURGUNDY_TEXT,
-  'sideBar.foreground': '#C4A5AE',
+  'sideBar.foreground': '#D6B4BC',
   'sideBarTitle.foreground': BURGUNDY_TEXT,
   'titleBar.activeForeground': BURGUNDY_TEXT,
   'titleBar.inactiveForeground': BURGUNDY_MUTED,
   'tab.activeForeground': '#FFFFFF',
   'tab.inactiveForeground': BURGUNDY_MUTED,
   'editorLineNumber.foreground': BURGUNDY_SUBTLE,
-  'editorLineNumber.activeForeground': '#C4A5AE',
-  'descriptionForeground': '#C4A5AEcc',
+  'editorLineNumber.activeForeground': '#F7EBEF',
+  'descriptionForeground': '#D6B4BCcc',
   'disabledForeground': BURGUNDY_MUTED,
-  'icon.foreground': '#F1E4E8b3',
+  'icon.foreground': '#F7EBEFb3',
 
   // Accent Highlights (Electric Rose / Burgundy Accent #FF7597)
   'activityBar.foreground': BURGUNDY_ACCENT,
@@ -254,35 +254,35 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   'list.highlightForeground': BURGUNDY_ACCENT,
 
   // Editor Selections, Cursor & Guides
-  'editor.selectionBackground': '#5C1A2B80',
+  'editor.selectionBackground': '#FF759740',
   'editor.selectionHighlightBackground': '#FF759726',
-  'editor.lineHighlightBackground': '#320B1566',
+  'editor.lineHighlightBackground': '#5E202C55',
   'editorCursor.foreground': BURGUNDY_ACCENT,
   'editorCursor.background': BURGUNDY_BASE,
-  'editorWhitespace.foreground': '#4D1B28',
-  'editorIndentGuide.background': '#3D121E',
-  'editorIndentGuide.activeBackground': '#6B2A3B',
-  'editorRuler.foreground': '#4D1B28',
-  'scrollbarSlider.background': '#FF75971a',
-  'scrollbarSlider.hoverBackground': '#FF759733',
-  'scrollbarSlider.activeBackground': '#FF759766',
+  'editorWhitespace.foreground': '#6E2D3B',
+  'editorIndentGuide.background': '#5C222E',
+  'editorIndentGuide.activeBackground': '#8F384B',
+  'editorRuler.foreground': '#5C222E',
+  'scrollbarSlider.background': '#FF759726',
+  'scrollbarSlider.hoverBackground': '#FF759740',
+  'scrollbarSlider.activeBackground': '#FF759780',
 
   // Terminal ANSI Colors
   'terminal.ansiBlack': BURGUNDY_BASE,
   'terminal.ansiRed': '#FF6B8B',
-  'terminal.ansiGreen': '#A8D5BA',
-  'terminal.ansiYellow': '#E5C07B',
-  'terminal.ansiBlue': '#7EB7E8',
-  'terminal.ansiMagenta': '#E0A0FF',
-  'terminal.ansiCyan': '#9ECBFF',
+  'terminal.ansiGreen': '#A8E6CF',
+  'terminal.ansiYellow': '#FFB86C',
+  'terminal.ansiBlue': '#85BFF3',
+  'terminal.ansiMagenta': '#E6A8FF',
+  'terminal.ansiCyan': '#A5DEFF',
   'terminal.ansiWhite': BURGUNDY_TEXT,
   'terminal.ansiBrightBlack': BURGUNDY_MUTED,
   'terminal.ansiBrightRed': '#FF8DA1',
-  'terminal.ansiBrightGreen': '#BCE3CC',
-  'terminal.ansiBrightYellow': '#F0D49E',
-  'terminal.ansiBrightBlue': '#9BC8F0',
-  'terminal.ansiBrightMagenta': '#EBB8FF',
-  'terminal.ansiBrightCyan': '#B8DCFF',
+  'terminal.ansiBrightGreen': '#BFF0DE',
+  'terminal.ansiBrightYellow': '#FFCE91',
+  'terminal.ansiBrightBlue': '#A8D4F7',
+  'terminal.ansiBrightMagenta': '#EDBFFF',
+  'terminal.ansiBrightCyan': '#C4E9FF',
   'terminal.ansiBrightWhite': '#FFFFFF'
 };
 
@@ -298,18 +298,18 @@ const STALE_KEYS = new Set([
 // Syntax color mapping for Burgundy aesthetic
 function transformTokensForBurgundy(tokens) {
   const tokenMap = {
-    '#D9D9D9': BURGUNDY_TEXT,
-    '#a3c679': '#A8D5BA', // Sage mint strings
-    '#6ebad7': '#FF7597', // Rose keywords / tags
-    '#d6808f': '#F3A87C', // Peach boolean
-    '#cd775c': '#F3A87C', // Peach numbers
-    '#6a90d0': '#7EB7E8', // Periwinkle functions
-    '#a178c4': '#E0A0FF', // Lavender storage
-    '#c85e60': '#FF7597', // Rose methods/keys
-    '#d5b05f': '#E5C07B', // Champagne types/classes
-    '#45454A': '#B37D8A', // Dusty mauve comments
-    '#7d5e49': '#C48B9F', // Muted rose
-    '#90a9bc': '#9ECBFF', // Soft ice blue properties
+    '#D9D9D9': BURGUNDY_TEXT, // Soft warm rose-cream base text (12.32:1 AAA)
+    '#a3c679': '#A8E6CF',     // Sage mint strings (10.14:1 AAA)
+    '#6ebad7': '#FF7597',     // Electric rose keywords / tags (5.61:1 AA)
+    '#d6808f': '#FFB86C',     // Warm amber booleans (8.39:1 AAA)
+    '#cd775c': '#FFB86C',     // Warm amber numbers (8.39:1 AAA)
+    '#6a90d0': '#85BFF3',     // Soft periwinkle functions (7.42:1 AAA)
+    '#a178c4': '#E6A8FF',     // Lavender storage (9.20:1 AAA)
+    '#c85e60': '#FF7597',     // Rose methods/keys (5.61:1 AA)
+    '#d5b05f': '#E5C07B',     // Golden champagne types/classes (8.28:1 AAA)
+    '#45454A': '#BD8C98',     // Dusty mauve comments (5.02:1 AA)
+    '#7d5e49': '#C4929E',     // Muted rose
+    '#90a9bc': '#9ECBFF',     // Soft ice blue properties (8.47:1 AAA)
     '#D9D9D9e6': `${BURGUNDY_TEXT}e6`
   };
 
@@ -329,11 +329,11 @@ function transformSemanticTokensForBurgundy(semantic) {
   const tokenMap = {
     '#D9D9D9': BURGUNDY_TEXT,
     '#d5b05f': '#E5C07B',
-    '#cd775c': '#F3A87C',
-    '#6a90d0': '#7EB7E8',
+    '#cd775c': '#FFB86C',
+    '#6a90d0': '#85BFF3',
     '#90a9bc': '#9ECBFF',
-    '#45454A': '#B37D8A',
-    '#a3c679': '#A8D5BA'
+    '#45454A': '#BD8C98',
+    '#a3c679': '#A8E6CF'
   };
 
   const result = {};

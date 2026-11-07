@@ -66,7 +66,7 @@ Output: doctor-report.md + .last-good-version update
 │
 ├── themes/
 │   ├── tbm-theme.json             # 294 compiled colors: uniform #0A0A0A surfaces & borders
-│   ├── tbm-burgundy.json          # 294 compiled colors: uniform #27060f deep wine base, rose accents
+│   ├── tbm-burgundy.json          # 294 compiled colors: uniform #4D1821 deep wine base, rose accents
 │   └── tbm-theme-hc.json          # High-contrast pitch black variant (#000000)
 │
 ├── fonts/
