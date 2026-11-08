@@ -601,10 +601,10 @@ export function buildTbmThemes() {
     };
     for (const k of STALE_KEYS) delete mergedColors[k];
 
-    // 1. TBM Theme (Default)
+    // 1. TBM Dark (Default)
     const tbmTheme = {
       $schema: 'vscode://schemas/color-theme',
-      name: 'TBM Theme',
+      name: 'TBM Dark',
       type: 'dark',
       semanticHighlighting: true,
       colors: mergedColors,
@@ -657,10 +657,10 @@ export function buildTbmThemes() {
     };
     for (const k of STALE_KEYS) delete mergedHcColors[k];
 
-    // 3. TBM Theme High Contrast
+    // 3. TBM Dark High Contrast
     const tbmHcTheme = {
       $schema: 'vscode://schemas/color-theme',
-      name: 'TBM Theme High Contrast',
+      name: 'TBM Dark High Contrast',
       type: 'hcBlack',
       semanticHighlighting: true,
       colors: mergedHcColors,

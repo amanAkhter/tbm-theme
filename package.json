@@ -1,9 +1,9 @@
 {
   "name": "tbm-theme",
-  "displayName": "TBM Theme",
-  "description": "TBM Theme - Authentic, uniform dark theme with outline UI icons and calm file icons for Antigravity & VS Code",
+  "displayName": "TBM Dark",
+  "description": "TBM Dark - Authentic, uniform dark theme with outline UI icons and calm file icons for Antigravity & VS Code",
   "publisher": "amanAkhter",
-  "version": "2026.9.11",
+  "version": "2026.9.12",
   "author": {
     "name": "Aman Akhter",
     "url": "https://github.com/amanAkhter"
@@ -27,7 +27,7 @@
   "contributes": {
     "themes": [
       {
-        "label": "TBM Theme",
+        "label": "TBM Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/tbm-theme.json"
       },
@@ -42,7 +42,7 @@
         "path": "./themes/tbm-navy.json"
       },
       {
-        "label": "TBM Theme High Contrast",
+        "label": "TBM Dark High Contrast",
         "uiTheme": "hc-black",
         "path": "./themes/tbm-theme-hc.json"
       }

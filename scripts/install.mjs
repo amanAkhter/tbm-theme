@@ -38,7 +38,7 @@ try {
     }
   } catch {}
 
-  console.log('[install] To activate: open Command Palette (Cmd+Shift+P) -> "Preferences: Color Theme" -> select "TBM Theme"');
+  console.log('[install] To activate: open Command Palette (Cmd+Shift+P) -> "Preferences: Color Theme" -> select "TBM Dark"');
 } catch (err) {
   console.warn('[install] Automatic CLI install failed or CLI not found.');
   console.log('[install] Manual install steps:');

@@ -1,7 +1,7 @@
-# TBM Theme
+# TBM Dark
 
 <p align="center">
-  <img src="./logo.png" alt="TBM Theme Logo" width="128" height="128" />
+  <img src="./logo.png" alt="TBM Dark Logo" width="128" height="128" />
 </p>
 
 <p align="center">
@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/amanAkhter"><img src="https://img.shields.io/badge/Publisher-Aman%20Akhter-80CBC4?style=flat-square" alt="Publisher" /></a>
-  <img src="https://img.shields.io/badge/Version-2026.9.6-blue?style=flat-square" alt="Version" />
+  <img src="https://img.shields.io/badge/Version-2026.9.12-blue?style=flat-square" alt="Version" />
   <img src="https://img.shields.io/badge/Engine-VS%20Code%20%5E1.85.0-orange?style=flat-square" alt="Engine" />
   <img src="https://img.shields.io/badge/WCAG%20Contrast-14.03%3A1%20(AAA)-success?style=flat-square" alt="WCAG AAA" />
   <img src="https://img.shields.io/badge/Architecture-100%25%20Declarative%20(0%20JS)-purple?style=flat-square" alt="Declarative" />
@@ -21,9 +21,9 @@
 
 ## 1. Overview & Philosophy
 
-**TBM Theme** was designed by **[Aman Akhter](https://github.com/amanAkhter)** to minimize cognitive fatigue during prolonged engineering sessions. Most modern dark themes suffer from contrasting panels, default fallback borders, and disjointed grey tones between the sidebar, editor, and terminal.
+**TBM Dark** was designed by **[Aman Akhter](https://github.com/amanAkhter)** to minimize cognitive fatigue during prolonged engineering sessions. Most modern dark themes suffer from contrasting panels, default fallback borders, and disjointed grey tones between the sidebar, editor, and terminal.
 
-TBM Theme solves this by enforcing **complete surface uniformity**:
+TBM Dark solves this by enforcing **complete surface uniformity**:
 1. **Uniform Plane Architecture**: Every single background surface—editor, gutter, tabs, sidebar, terminal, status bar, minimap, and panel—shares an identical dark base (`#0A0A0A`).
 2. **Zero-Seam Structural Borders**: Borders between UI regions are unified to the surface color (`#0A0A0A`), eliminating visual gridlines and distractions.
 3. **Focal Accents**: High-priority interactive states (active tab indicator, active activity bar item, terminal tab indicator, badges) pop cleanly in electric teal (`#80CBC4`).
@@ -36,10 +36,10 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 
 | Component | Identifier | Details |
 |---|---|---|
-| **Color Theme (Default)** | `TBM Theme` | 294 colors, `#0A0A0A` uniform base, `#80CBC4` teal accents |
+| **Color Theme (Default)** | `TBM Dark` | 294 colors, `#0A0A0A` uniform base, `#80CBC4` teal accents |
 | **Color Theme (Burgundy)**| `TBM Deep Dark Titanium Burgundy` | 294 colors, `#100306` iPhone Pro dark titanium wine base, `#FF7597` rose accents |
 | **Color Theme (Dark Navy)**| `TBM Dark Navy Blue` | 294 colors, `#010414` deep dark midnight navy base, `#38BDF8` sky blue accents |
-| **Color Theme (High Contrast)**| `TBM Theme High Contrast` | Pure `#000000` pitch base, high-contrast syntax highlighting |
+| **Color Theme (High Contrast)**| `TBM Dark High Contrast` | Pure `#000000` pitch base, high-contrast syntax highlighting |
 | **Product Icon Theme** | `TBM Outline` (`tbm-outline`) | 183 fine outline UI glyphs powered by bundled WOFF2 font |
 | **File Icon Theme (Carbon)** | `TBM Icons` (`tbm-icons`) | 393 file & folder definitions with quiet carbon SVGs |
 | **File Icon Theme (Burgundy)**| `TBM Deep Dark Titanium Burgundy File Icons` (`tbm-burgundy-icons`) | 393 file & folder definitions with titanium wine folders and electric rose accents |
@@ -106,7 +106,7 @@ node scripts/apply-settings.mjs --apply
 This ensures your user `settings.json` activates:
 ```json
 {
-  "workbench.colorTheme": "TBM Theme",
+  "workbench.colorTheme": "TBM Dark",
   "workbench.productIconTheme": "tbm-outline",
   "workbench.iconTheme": "tbm-icons"
 }

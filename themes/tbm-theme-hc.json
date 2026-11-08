@@ -1,6 +1,6 @@
 {
   "$schema": "vscode://schemas/color-theme",
-  "name": "TBM Theme High Contrast",
+  "name": "TBM Dark High Contrast",
   "type": "hcBlack",
   "semanticHighlighting": true,
   "colors": {

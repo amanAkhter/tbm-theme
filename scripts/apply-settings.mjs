@@ -42,7 +42,7 @@ export function applySettings() {
   const args = process.argv.slice(2);
   const isApply = args.includes('--apply');
   const themeArgIdx = args.indexOf('--theme');
-  const requestedTheme = (themeArgIdx !== -1 && args[themeArgIdx + 1]) ? args[themeArgIdx + 1] : 'TBM Theme';
+  const requestedTheme = (themeArgIdx !== -1 && args[themeArgIdx + 1]) ? args[themeArgIdx + 1] : 'TBM Dark';
   const iconThemeArgIdx = args.indexOf('--icon-theme');
   let requestedIconTheme = (iconThemeArgIdx !== -1 && args[iconThemeArgIdx + 1]) ? args[iconThemeArgIdx + 1] : null;
   if (!requestedIconTheme) {
@@ -102,7 +102,7 @@ export function applySettings() {
   const colorCustomizations = currentSettings['workbench.colorCustomizations'];
   let cleanColorCustomizations = null;
   if (colorCustomizations && typeof colorCustomizations === 'object') {
-    const keysToRemove = ['[TBM Theme]', '[TBM Burgundy]', '[Vira Carbon]'];
+    const keysToRemove = ['[TBM Dark]', '[TBM Theme]', '[TBM Burgundy]', '[Vira Carbon]'];
     const foundKeys = keysToRemove.filter((k) => k in colorCustomizations);
     if (foundKeys.length > 0) {
       hasChanges = true;
