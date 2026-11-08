@@ -1,6 +1,6 @@
 # TBM Theme Doctor Report
 
-*Generated on: 11/8/2026, 8:59:41 PM*
+*Generated on: 11/9/2026, 1:07:19 AM*
 
 ## Environment
 - **Editor**: Antigravity IDE
@@ -10,10 +10,10 @@
 - **Status**: ✅ Compatible
 
 ## Registry Compatibility
-- **Our Defined Colors**: 294
+- **Our Defined Colors**: 298
 - **Editor Known Colors**: 906
 - **Stale Keys**: 0
-- **New / Unstyled Keys in Editor**: 612
+- **New / Unstyled Keys in Editor**: 608
 
 ### Stale Keys (Set by us, but dropped by editor)
 - None. All defined keys are valid.

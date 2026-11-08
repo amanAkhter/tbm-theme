@@ -159,10 +159,10 @@
     "statusBar.debuggingBackground": "#010414",
     "statusBar.debuggingForeground": "#80CBC4",
     "statusBarItem.hoverBackground": "#45454A33",
-    "statusBarItem.remoteHoverBackground": "#80CBC4",
-    "statusBarItem.remoteHoverForeground": "#000000",
-    "statusBarItem.remoteForeground": "#80CBC4",
-    "statusBarItem.remoteBackground": "#80CBC414",
+    "statusBarItem.remoteHoverBackground": "#67E8F9",
+    "statusBarItem.remoteHoverForeground": "#010414",
+    "statusBarItem.remoteForeground": "#010414",
+    "statusBarItem.remoteBackground": "#38BDF8",
     "editorBracketMatch.border": "#FFCC0080",
     "editorBracketMatch.background": "#0A0A0A",
     "editorOverviewRuler.findMatchForeground": "#80CBC4",
@@ -297,7 +297,11 @@
     "notebook.cellBorderColor": "#010414",
     "editorStickyScroll.border": "#010414",
     "panelSection.border": "#010414",
-    "terminal.tab.activeBorder": "#38BDF8"
+    "terminal.tab.activeBorder": "#38BDF8",
+    "statusBarItem.offlineBackground": "#546A8C",
+    "statusBarItem.offlineForeground": "#010414",
+    "statusBarItem.offlineHoverBackground": "#38BDF8",
+    "statusBarItem.offlineHoverForeground": "#010414"
   },
   "tokenColors": [
     {

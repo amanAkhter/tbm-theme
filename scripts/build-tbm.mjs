@@ -86,7 +86,17 @@ const UNIFORM_CARBON_OVERRIDES = {
   'activityBarBadge.foreground': '#000000',
   'selection.background': '#80CBC4',
   'progressBar.background': '#80CBC4',
-  'textLink.foreground': '#80CBC4'
+  'textLink.foreground': '#80CBC4',
+
+  // Status Bar Remote Host Indicator Button
+  'statusBarItem.remoteBackground': '#80CBC4',
+  'statusBarItem.remoteForeground': '#0A0A0A',
+  'statusBarItem.remoteHoverBackground': '#66D5CB',
+  'statusBarItem.remoteHoverForeground': '#0A0A0A',
+  'statusBarItem.offlineBackground': '#56575D',
+  'statusBarItem.offlineForeground': '#0A0A0A',
+  'statusBarItem.offlineHoverBackground': '#80CBC4',
+  'statusBarItem.offlineHoverForeground': '#0A0A0A'
 };
 
 const UNIFORM_HC_OVERRIDES = {
@@ -242,6 +252,16 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   'focusBorder': BURGUNDY_ACCENT,
   'sash.hoverBorder': '#FF759780',
 
+  // Status Bar Remote Host Indicator Button
+  'statusBarItem.remoteBackground': BURGUNDY_ACCENT,
+  'statusBarItem.remoteForeground': BURGUNDY_BASE,
+  'statusBarItem.remoteHoverBackground': BURGUNDY_ACCENT_HOVER,
+  'statusBarItem.remoteHoverForeground': BURGUNDY_BASE,
+  'statusBarItem.offlineBackground': BURGUNDY_MUTED,
+  'statusBarItem.offlineForeground': BURGUNDY_BASE,
+  'statusBarItem.offlineHoverBackground': BURGUNDY_ACCENT,
+  'statusBarItem.offlineHoverForeground': BURGUNDY_BASE,
+
   // Interactive Inputs & Elevated Planes
   'input.background': BURGUNDY_ELEVATED,
   'input.foreground': BURGUNDY_TEXT,
@@ -395,6 +415,16 @@ const UNIFORM_NAVY_OVERRIDES = {
   'textLink.activeForeground': '#FFFFFF',
   'focusBorder': NAVY_ACCENT,
   'sash.hoverBorder': '#38BDF880',
+
+  // Status Bar Remote Host Indicator Button
+  'statusBarItem.remoteBackground': NAVY_ACCENT,
+  'statusBarItem.remoteForeground': NAVY_BASE,
+  'statusBarItem.remoteHoverBackground': NAVY_ACCENT_HOVER,
+  'statusBarItem.remoteHoverForeground': NAVY_BASE,
+  'statusBarItem.offlineBackground': NAVY_MUTED,
+  'statusBarItem.offlineForeground': NAVY_BASE,
+  'statusBarItem.offlineHoverBackground': NAVY_ACCENT,
+  'statusBarItem.offlineHoverForeground': NAVY_BASE,
 
   // Interactive Inputs & Elevated Planes
   'input.background': NAVY_ELEVATED,
