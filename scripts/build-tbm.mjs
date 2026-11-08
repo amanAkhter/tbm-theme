@@ -132,16 +132,16 @@ const BURGUNDY_MUTED = '#9E6E78';
 const BURGUNDY_SUBTLE = '#5E2B36';
 const BURGUNDY_BORDER = '#160509';
 
-// TBM Dark Navy Blue Palette (Deep Dark Navy Blue #00072D Base Surface)
-const NAVY_BASE = '#00072D';
-const NAVY_ELEVATED = '#051142';
-const NAVY_SELECTION = '#0A1A5C';
+// TBM Dark Navy Blue Palette (Deep Dark Midnight Navy #010414 Base Surface)
+const NAVY_BASE = '#010414';
+const NAVY_ELEVATED = '#050D24';
+const NAVY_SELECTION = '#0A1A40';
 const NAVY_ACCENT = '#38BDF8';
 const NAVY_ACCENT_HOVER = '#67E8F9';
 const NAVY_TEXT = '#E2E8F0';
-const NAVY_MUTED = '#627A9C';
-const NAVY_SUBTLE = '#283B63';
-const NAVY_BORDER = '#00072D';
+const NAVY_MUTED = '#546A8C';
+const NAVY_SUBTLE = '#192C54';
+const NAVY_BORDER = '#010414';
 
 const UNIFORM_BURGUNDY_OVERRIDES = {
   // Uniform Background Surfaces
@@ -365,7 +365,7 @@ const UNIFORM_NAVY_OVERRIDES = {
   // Text & Foregrounds
   'foreground': NAVY_TEXT,
   'editor.foreground': NAVY_TEXT,
-  'sideBar.foreground': '#9DB5D6',
+  'sideBar.foreground': '#8AA3C7',
   'sideBarTitle.foreground': NAVY_TEXT,
   'titleBar.activeForeground': NAVY_TEXT,
   'titleBar.inactiveForeground': NAVY_MUTED,
@@ -373,7 +373,7 @@ const UNIFORM_NAVY_OVERRIDES = {
   'tab.inactiveForeground': NAVY_MUTED,
   'editorLineNumber.foreground': NAVY_SUBTLE,
   'editorLineNumber.activeForeground': '#F1F5F9',
-  'descriptionForeground': '#9DB5D6cc',
+  'descriptionForeground': '#8AA3C7cc',
   'disabledForeground': NAVY_MUTED,
   'icon.foreground': '#F1F5F9b3',
 
@@ -421,13 +421,13 @@ const UNIFORM_NAVY_OVERRIDES = {
   // Editor Selections, Cursor & Guides
   'editor.selectionBackground': '#38BDF840',
   'editor.selectionHighlightBackground': '#38BDF826',
-  'editor.lineHighlightBackground': '#05114266',
+  'editor.lineHighlightBackground': '#060E2866',
   'editorCursor.foreground': NAVY_ACCENT,
   'editorCursor.background': NAVY_BASE,
-  'editorWhitespace.foreground': '#1A2B56',
-  'editorIndentGuide.background': '#0A1A45',
-  'editorIndentGuide.activeBackground': '#1E3A78',
-  'editorRuler.foreground': '#0A1A45',
+  'editorWhitespace.foreground': '#0C1B3E',
+  'editorIndentGuide.background': '#050E24',
+  'editorIndentGuide.activeBackground': '#0E2254',
+  'editorRuler.foreground': '#050E24',
   'scrollbarSlider.background': '#38BDF826',
   'scrollbarSlider.hoverBackground': '#38BDF840',
   'scrollbarSlider.activeBackground': '#38BDF880',

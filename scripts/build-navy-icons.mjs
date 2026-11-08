@@ -44,9 +44,9 @@ export function buildNavyIcons() {
           .replaceAll('#80CBC4', '#38BDF8')
           .replaceAll('#00b6c2', '#67E8F9');
       } else {
-        // Closed folder: Deep Dark Navy Blue (#163275) with sky accent (#38BDF8)
+        // Closed folder: Deep Dark Midnight Navy (#0E2254) with sky accent (#38BDF8)
         recolored = recolored
-          .replaceAll('#303236', '#163275')
+          .replaceAll('#303236', '#0E2254')
           .replaceAll('#66d5cb', '#38BDF8')
           .replaceAll('#80cbc4', '#38BDF8');
       }
@@ -70,15 +70,15 @@ export function buildNavyIcons() {
         .replaceAll('#66d5cb', '#38BDF8')
         .replaceAll('color(display-p3 .502 .7961 .7686)', '#38BDF8');
 
-      // Cool grays/slates to frosted navy tones
+      // Cool grays/slates to deep dark frosted navy tones
       recolored = recolored
-        .replaceAll('color(display-p3 .42 .4493 .58)', 'color(display-p3 .40 .55 .75)')
-        .replaceAll('color(display-p3 .698 .8 .8392)', 'color(display-p3 .70 .85 .98)')
-        .replaceAll('color(display-p3 .2039 .2235 .2667)', 'color(display-p3 .08 .16 .35)')
-        .replaceAll('color(display-p3 .1469 .1756 .2281)', 'color(display-p3 .04 .10 .25)')
-        .replaceAll('#6b7394', '#627A9C')
-        .replaceAll('#b2ccd6', '#9DB5D6')
-        .replaceAll('#303236', '#163275');
+        .replaceAll('color(display-p3 .42 .4493 .58)', 'color(display-p3 .35 .48 .68)')
+        .replaceAll('color(display-p3 .698 .8 .8392)', 'color(display-p3 .65 .78 .92)')
+        .replaceAll('color(display-p3 .2039 .2235 .2667)', 'color(display-p3 .04 .08 .20)')
+        .replaceAll('color(display-p3 .1469 .1756 .2281)', 'color(display-p3 .02 .04 .12)')
+        .replaceAll('#6b7394', '#546A8C')
+        .replaceAll('#b2ccd6', '#8AA3C7')
+        .replaceAll('#303236', '#0E2254');
 
       const outPath = path.join(navyFilesDir, fileName);
       fs.writeFileSync(outPath, recolored, 'utf8');
@@ -103,3 +103,4 @@ export function buildNavyIcons() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   buildNavyIcons();
 }
+

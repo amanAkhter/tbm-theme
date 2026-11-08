@@ -38,7 +38,7 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 |---|---|---|
 | **Color Theme (Default)** | `TBM Theme` | 294 colors, `#0A0A0A` uniform base, `#80CBC4` teal accents |
 | **Color Theme (Burgundy)**| `TBM Deep Dark Titanium Burgundy` | 294 colors, `#160509` iPhone Pro dark titanium wine base, `#FF7597` rose accents |
-| **Color Theme (Dark Navy)**| `TBM Dark Navy Blue` | 294 colors, `#00072D` deep dark midnight navy base, `#38BDF8` sky blue accents |
+| **Color Theme (Dark Navy)**| `TBM Dark Navy Blue` | 294 colors, `#010414` deep dark midnight navy base, `#38BDF8` sky blue accents |
 | **Color Theme (High Contrast)**| `TBM Theme High Contrast` | Pure `#000000` pitch base, high-contrast syntax highlighting |
 | **Product Icon Theme** | `TBM Outline` (`tbm-outline`) | 183 fine outline UI glyphs powered by bundled WOFF2 font |
 | **File Icon Theme (Carbon)** | `TBM Icons` (`tbm-icons`) | 393 file & folder definitions with quiet carbon SVGs |
@@ -52,16 +52,16 @@ TBM Theme solves this by enforcing **complete surface uniformity**:
 ### 3.1 Core Palette Comparison
 | Token | TBM Theme | TBM Deep Dark Titanium Burgundy | TBM Dark Navy Blue | Purpose |
 |---|---|---|---|---|
-| `surface.base` | `#0A0A0A` | `#160509` | `#00072D` | Unified background for editor, sidebar, tabs, terminal |
-| `surface.border`| `#0A0A0A` | `#160509` | `#00072D` | Seamless border plane between all editor groups |
+| `surface.base` | `#0A0A0A` | `#160509` | `#010414` | Unified background for editor, sidebar, tabs, terminal |
+| `surface.border`| `#0A0A0A` | `#160509` | `#010414` | Seamless border plane between all editor groups |
 | `text.primary` | `#D9D9D9` | `#F5E8EB` | `#E2E8F0` | High-legibility primary text & syntax foreground |
-| `text.muted` | `#56575D` | `#9E6E78` | `#627A9C` | Dimmed inactive headers, line numbers, and breadcrumbs |
+| `text.muted` | `#56575D` | `#9E6E78` | `#546A8C` | Dimmed inactive headers, line numbers, and breadcrumbs |
 | `accent.primary`| `#80CBC4` | `#FF7597` | `#38BDF8` | Focal indicators, active borders, and badges |
 
 ### 3.2 WCAG Contrast Compliance
 - **TBM Theme**: $CR = \frac{0.6868 + 0.05}{0.0031 + 0.05} = \mathbf{14.03 : 1}$ (WCAG AAA)
 - **TBM Deep Dark Titanium Burgundy**: $CR = \frac{0.7853 + 0.05}{0.0030 + 0.05} = \mathbf{16.63 : 1}$ (WCAG AAA)
-- **TBM Dark Navy Blue**: $CR = \frac{0.7800 + 0.05}{0.0037 + 0.05} = \mathbf{15.95 : 1}$ (WCAG AAA)
+- **TBM Dark Navy Blue**: $CR = \frac{0.7800 + 0.05}{0.0015 + 0.05} = \mathbf{16.56 : 1}$ (WCAG AAA)
 
 - **WCAG Level AA Threshold**: $\ge 4.5:1$
 - **WCAG Level AAA Threshold**: $\ge 7.0:1$
