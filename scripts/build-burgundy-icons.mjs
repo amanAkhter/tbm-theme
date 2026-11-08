@@ -44,9 +44,9 @@ export function buildBurgundyIcons() {
           .replaceAll('#80CBC4', '#FF7597')
           .replaceAll('#00b6c2', '#FF8DA1');
       } else {
-        // Closed folder: Dark Titanium Wine (#8A4456)
+        // Closed folder: Deep Dark Titanium Wine (#5E2633)
         recolored = recolored
-          .replaceAll('#303236', '#8A4456')
+          .replaceAll('#303236', '#5E2633')
           .replaceAll('#66d5cb', '#FF7597')
           .replaceAll('#80cbc4', '#FF7597');
       }
@@ -70,14 +70,15 @@ export function buildBurgundyIcons() {
         .replaceAll('#66d5cb', '#FF7597')
         .replaceAll('color(display-p3 .502 .7961 .7686)', '#FF7597');
 
-      // Warm slate/cold grey bodies to soft warm titanium rose
+      // Warm slate/cold grey bodies to deep dark titanium wine tones
       recolored = recolored
-        .replaceAll('color(display-p3 .42 .4493 .58)', 'color(display-p3 .75 .52 .60)')
-        .replaceAll('color(display-p3 .698 .8 .8392)', 'color(display-p3 .84 .70 .76)')
-        .replaceAll('color(display-p3 .2039 .2235 .2667)', 'color(display-p3 .28 .12 .16)')
-        .replaceAll('color(display-p3 .1469 .1756 .2281)', 'color(display-p3 .22 .08 .12)')
-        .replaceAll('#6b7394', '#A87682')
-        .replaceAll('#b2ccd6', '#D6B5BD');
+        .replaceAll('color(display-p3 .42 .4493 .58)', 'color(display-p3 .65 .42 .50)')
+        .replaceAll('color(display-p3 .698 .8 .8392)', 'color(display-p3 .75 .60 .68)')
+        .replaceAll('color(display-p3 .2039 .2235 .2667)', 'color(display-p3 .18 .06 .09)')
+        .replaceAll('color(display-p3 .1469 .1756 .2281)', 'color(display-p3 .10 .03 .05)')
+        .replaceAll('#6b7394', '#8A5D66')
+        .replaceAll('#b2ccd6', '#C7A2AB')
+        .replaceAll('#303236', '#5E2633');
 
       const outPath = path.join(burgundyFilesDir, fileName);
       fs.writeFileSync(outPath, recolored, 'utf8');

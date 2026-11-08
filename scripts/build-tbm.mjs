@@ -121,16 +121,16 @@ const UNIFORM_HC_OVERRIDES = {
   'panel.border': '#000000'
 };
 
-// TBM Burgundy Palette (Deep iPhone Pro Dark Titanium Burgundy #160509 Base Surface)
-const BURGUNDY_BASE = '#160509';
-const BURGUNDY_ELEVATED = '#250B12';
-const BURGUNDY_SELECTION = '#3B121E';
+// TBM Burgundy Palette (Deep iPhone Pro Dark Titanium Burgundy #100306 Base Surface)
+const BURGUNDY_BASE = '#100306';
+const BURGUNDY_ELEVATED = '#1C060C';
+const BURGUNDY_SELECTION = '#2D0A14';
 const BURGUNDY_ACCENT = '#FF7597';
 const BURGUNDY_ACCENT_HOVER = '#FF8DA1';
 const BURGUNDY_TEXT = '#F5E8EB';
-const BURGUNDY_MUTED = '#9E6E78';
-const BURGUNDY_SUBTLE = '#5E2B36';
-const BURGUNDY_BORDER = '#160509';
+const BURGUNDY_MUTED = '#8A5D66';
+const BURGUNDY_SUBTLE = '#4A1E27';
+const BURGUNDY_BORDER = '#100306';
 
 // TBM Dark Navy Blue Palette (Deep Dark Midnight Navy #010414 Base Surface)
 const NAVY_BASE = '#010414';
@@ -211,7 +211,7 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   // Text & Foregrounds
   'foreground': BURGUNDY_TEXT,
   'editor.foreground': BURGUNDY_TEXT,
-  'sideBar.foreground': '#D6B4BC',
+  'sideBar.foreground': '#C7A2AB',
   'sideBarTitle.foreground': BURGUNDY_TEXT,
   'titleBar.activeForeground': BURGUNDY_TEXT,
   'titleBar.inactiveForeground': BURGUNDY_MUTED,
@@ -219,7 +219,7 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   'tab.inactiveForeground': BURGUNDY_MUTED,
   'editorLineNumber.foreground': BURGUNDY_SUBTLE,
   'editorLineNumber.activeForeground': '#F7EBEF',
-  'descriptionForeground': '#D6B4BCcc',
+  'descriptionForeground': '#C7A2ABcc',
   'disabledForeground': BURGUNDY_MUTED,
   'icon.foreground': '#F7EBEFb3',
 
@@ -267,13 +267,13 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   // Editor Selections, Cursor & Guides
   'editor.selectionBackground': '#FF759740',
   'editor.selectionHighlightBackground': '#FF759726',
-  'editor.lineHighlightBackground': '#250B1266',
+  'editor.lineHighlightBackground': '#1C060C66',
   'editorCursor.foreground': BURGUNDY_ACCENT,
   'editorCursor.background': BURGUNDY_BASE,
-  'editorWhitespace.foreground': '#421622',
-  'editorIndentGuide.background': '#2E0E17',
-  'editorIndentGuide.activeBackground': '#5E202E',
-  'editorRuler.foreground': '#2E0E17',
+  'editorWhitespace.foreground': '#331018',
+  'editorIndentGuide.background': '#200810',
+  'editorIndentGuide.activeBackground': '#4A1724',
+  'editorRuler.foreground': '#200810',
   'scrollbarSlider.background': '#FF759726',
   'scrollbarSlider.hoverBackground': '#FF759740',
   'scrollbarSlider.activeBackground': '#FF759780',
