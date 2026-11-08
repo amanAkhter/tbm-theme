@@ -3,6 +3,7 @@
 src/**
 scripts/**
 samples/**
+env/**
 .cache/**
 .last-good-version
 .vira-extracted/**

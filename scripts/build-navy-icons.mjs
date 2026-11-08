@@ -21,6 +21,15 @@ export function buildNavyIcons() {
 
   const newDefs = {};
 
+  const closedBadgeColors = [
+    '#66d5cb', '#89ddff', '#dcf7b5', '#f9b7a4', '#fff', '#ffffff',
+    '#aee33e', '#ffcb6b', '#f5f7f9', '#c3e88d', '#ff8b8b', '#f69dd5',
+    '#f78c6c', '#6b7394', '#f7f7f7', '#82aaff', '#4775d1', '#2ecc71',
+    '#b2ccd6', '#916b53', '#8472f3', '#697da5', '#fa6068', '#80cbc4',
+    '#00b6c2', '#d14748', '#935edd', '#5654bc', '#c792ea', '#bb80b3',
+    '#69a7d3', '#3965bd'
+  ];
+
   // 1. Process all icon definitions
   for (const [key, def] of Object.entries(baseTheme.iconDefinitions)) {
     const origRelPath = def.iconPath;
@@ -38,17 +47,27 @@ export function buildNavyIcons() {
       let recolored = svgContent;
 
       if (fileName.includes('_open.svg')) {
-        // Open folder: Vibrant Electric Sky Blue (#38BDF8)
+        // Open folder: Vibrant Electric Sky Blue (#38BDF8) - bright glowing accent with luminous pocket
         recolored = recolored
           .replaceAll('#80cbc4', '#38BDF8')
           .replaceAll('#80CBC4', '#38BDF8')
-          .replaceAll('#00b6c2', '#67E8F9');
+          .replaceAll('#00b6c2', '#67E8F9')
+          .replaceAll('opacity=".16"', 'opacity=".36"');
       } else {
-        // Closed folder: Deep Dark Midnight Navy (#0E2254) with sky accent (#38BDF8)
+        // Closed folder: Dimmed Slate Cobalt (#304866) - calm, quiet, recognizable but clearly dimmed
+        // 1. Base folder body & pockets
         recolored = recolored
-          .replaceAll('#303236', '#0E2254')
-          .replaceAll('#66d5cb', '#38BDF8')
-          .replaceAll('#80cbc4', '#38BDF8');
+          .replaceAll('#303236', '#304866')
+          .replaceAll('#4a616c', '#304866')
+          .replaceAll('#343944', '#304866')
+          .replaceAll('color(display-p3 .2902 .3804 .4235)', '#304866')
+          .replaceAll('opacity=".16"', 'opacity=".12"')
+          .replaceAll('opacity=".18"', 'opacity=".12"');
+
+        // 2. Dim all badge and accent colors to calm mid-slate cobalt (#507299)
+        for (const col of closedBadgeColors) {
+          recolored = recolored.replaceAll(col, '#507299').replaceAll(col.toUpperCase(), '#507299');
+        }
       }
 
       const outFileName = fileName.replace('.variant.carbon.svg', '.variant.navy.svg').replace('.svg', '.navy.svg');
@@ -78,7 +97,7 @@ export function buildNavyIcons() {
         .replaceAll('color(display-p3 .1469 .1756 .2281)', 'color(display-p3 .02 .04 .12)')
         .replaceAll('#6b7394', '#546A8C')
         .replaceAll('#b2ccd6', '#8AA3C7')
-        .replaceAll('#303236', '#0E2254');
+        .replaceAll('#303236', '#40668F');
 
       const outPath = path.join(navyFilesDir, fileName);
       fs.writeFileSync(outPath, recolored, 'utf8');
@@ -103,4 +122,3 @@ export function buildNavyIcons() {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   buildNavyIcons();
 }
-
