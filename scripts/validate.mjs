@@ -195,7 +195,20 @@ export function validateAll() {
     }
   }
 
-  // 3. Validate TBM HC theme
+  // 3. Validate TBM Dark Navy Blue theme
+  const navyPath = path.join(rootDir, 'themes', 'tbm-navy.json');
+  if (fs.existsSync(navyPath)) {
+    const navyErrors = validateThemeJson(navyPath);
+    if (navyErrors.length > 0) {
+      console.error('[validate] TBM Dark Navy Blue theme errors:');
+      navyErrors.forEach((e) => console.error(`  - ${e}`));
+      hasErrors = true;
+    } else {
+      console.log('[validate] TBM Dark Navy Blue theme validation passed.');
+    }
+  }
+
+  // 4. Validate TBM HC theme
   const hcPath = path.join(rootDir, 'themes', 'tbm-theme-hc.json');
   if (fs.existsSync(hcPath)) {
     const hcErrors = validateThemeJson(hcPath);
@@ -208,7 +221,7 @@ export function validateAll() {
     }
   }
 
-  // 3. Validate product icons
+  // 5. Validate product icons
   const productErrors = validateProductIcons();
   if (productErrors.length > 0) {
     console.error('[validate] Product icon errors:');
@@ -218,16 +231,17 @@ export function validateAll() {
     console.log('[validate] Product icon font & definitions passed.');
   }
 
-  // 4. Validate file icons (Carbon & Burgundy)
+  // 6. Validate file icons (Carbon, Burgundy & Navy)
   const fileErrors = validateFileIcons('file-icon-theme.json');
   const burgundyFileErrors = validateFileIcons('file-icon-theme-burgundy.json');
-  const combinedFileErrors = [...fileErrors, ...burgundyFileErrors];
+  const navyFileErrors = validateFileIcons('file-icon-theme-navy.json');
+  const combinedFileErrors = [...fileErrors, ...burgundyFileErrors, ...navyFileErrors];
   if (combinedFileErrors.length > 0) {
     console.error('[validate] File icon errors:');
     combinedFileErrors.forEach((e) => console.error(`  - ${e}`));
     hasErrors = true;
   } else {
-    console.log('[validate] File icon mappings & SVGs verified for both icon suites.');
+    console.log('[validate] File icon mappings & SVGs verified for all icon suites.');
   }
 
   if (hasErrors) {

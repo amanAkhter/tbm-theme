@@ -46,7 +46,13 @@ export function applySettings() {
   const iconThemeArgIdx = args.indexOf('--icon-theme');
   let requestedIconTheme = (iconThemeArgIdx !== -1 && args[iconThemeArgIdx + 1]) ? args[iconThemeArgIdx + 1] : null;
   if (!requestedIconTheme) {
-    requestedIconTheme = requestedTheme.includes('Burgundy') ? 'tbm-burgundy-icons' : 'tbm-icons';
+    if (requestedTheme.includes('Navy')) {
+      requestedIconTheme = 'tbm-navy-icons';
+    } else if (requestedTheme.includes('Burgundy')) {
+      requestedIconTheme = 'tbm-burgundy-icons';
+    } else {
+      requestedIconTheme = 'tbm-icons';
+    }
   }
 
   console.log('=== TBM Theme Settings Manager ===\n');

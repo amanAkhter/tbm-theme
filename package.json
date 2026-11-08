@@ -37,6 +37,11 @@
         "path": "./themes/tbm-burgundy.json"
       },
       {
+        "label": "TBM Dark Navy Blue",
+        "uiTheme": "vs-dark",
+        "path": "./themes/tbm-navy.json"
+      },
+      {
         "label": "TBM Theme High Contrast",
         "uiTheme": "hc-black",
         "path": "./themes/tbm-theme-hc.json"
@@ -59,11 +64,16 @@
         "id": "tbm-burgundy-icons",
         "label": "TBM Deep Dark Titanium Burgundy File Icons",
         "path": "./icons/file-icon-theme-burgundy.json"
+      },
+      {
+        "id": "tbm-navy-icons",
+        "label": "TBM Dark Navy Blue Icons",
+        "path": "./icons/file-icon-theme-navy.json"
       }
     ]
   },
   "scripts": {
-    "build": "node scripts/build-tbm.mjs && node scripts/build-burgundy-icons.mjs",
+    "build": "node scripts/build-tbm.mjs && node scripts/build-burgundy-icons.mjs && node scripts/build-navy-icons.mjs",
     "validate": "node scripts/validate.mjs",
     "package": "npx @vscode/vsce package --no-dependencies",
     "doctor": "node scripts/doctor.mjs",

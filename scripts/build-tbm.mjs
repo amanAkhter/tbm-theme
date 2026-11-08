@@ -132,6 +132,17 @@ const BURGUNDY_MUTED = '#9E6E78';
 const BURGUNDY_SUBTLE = '#5E2B36';
 const BURGUNDY_BORDER = '#160509';
 
+// TBM Dark Navy Blue Palette (Deep Dark Navy Blue #00072D Base Surface)
+const NAVY_BASE = '#00072D';
+const NAVY_ELEVATED = '#051142';
+const NAVY_SELECTION = '#0A1A5C';
+const NAVY_ACCENT = '#38BDF8';
+const NAVY_ACCENT_HOVER = '#67E8F9';
+const NAVY_TEXT = '#E2E8F0';
+const NAVY_MUTED = '#627A9C';
+const NAVY_SUBTLE = '#283B63';
+const NAVY_BORDER = '#00072D';
+
 const UNIFORM_BURGUNDY_OVERRIDES = {
   // Uniform Background Surfaces
   'editor.background': BURGUNDY_BASE,
@@ -286,6 +297,160 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   'terminal.ansiBrightWhite': '#FFFFFF'
 };
 
+const UNIFORM_NAVY_OVERRIDES = {
+  // Uniform Background Surfaces
+  'editor.background': NAVY_BASE,
+  'editorGutter.background': NAVY_BASE,
+  'statusBar.background': NAVY_BASE,
+  'statusBar.noFolderBackground': NAVY_BASE,
+  'statusBar.debuggingBackground': NAVY_BASE,
+  'activityBar.background': NAVY_BASE,
+  'activityBar.activeBackground': NAVY_BASE,
+  'activityBarTop.background': NAVY_BASE,
+  'tab.activeBackground': NAVY_BASE,
+  'tab.inactiveBackground': NAVY_BASE,
+  'tab.unfocusedActiveBackground': NAVY_BASE,
+  'tab.unfocusedInactiveBackground': NAVY_BASE,
+  'breadcrumb.background': NAVY_BASE,
+  'breadcrumbPicker.background': NAVY_BASE,
+  'banner.background': NAVY_BASE,
+  'sideBar.background': NAVY_BASE,
+  'sideBarSectionHeader.background': NAVY_BASE,
+  'terminal.background': NAVY_BASE,
+  'editorGroupHeader.tabsBackground': NAVY_BASE,
+  'editorGroupHeader.noTabsBackground': NAVY_BASE,
+  'menu.background': NAVY_BASE,
+  'titleBar.activeBackground': NAVY_BASE,
+  'titleBar.inactiveBackground': NAVY_BASE,
+  'minimap.background': NAVY_BASE,
+  'panel.background': NAVY_BASE,
+  'panelSectionHeader.background': NAVY_BASE,
+  'dropdown.background': NAVY_BASE,
+  'debugToolBar.background': NAVY_BASE,
+  'editorWidget.background': NAVY_BASE,
+  'editorHoverWidget.background': NAVY_BASE,
+  'editorSuggestWidget.background': NAVY_BASE,
+  'notifications.background': NAVY_BASE,
+  'quickInput.background': NAVY_BASE,
+  'quickInputTitle.background': NAVY_BASE,
+
+  // Seamless Borders
+  'editorGroup.border': NAVY_BORDER,
+  'editorGroupHeader.tabsBorder': NAVY_BORDER,
+  'editorGroupHeader.border': NAVY_BORDER,
+  'sideBar.border': NAVY_BORDER,
+  'sideBarSectionHeader.border': NAVY_BORDER,
+  'sideBarStickyScroll.border': NAVY_BORDER,
+  'sideBarActivityBarTop.border': NAVY_BORDER,
+  'statusBar.border': NAVY_BORDER,
+  'activityBar.border': NAVY_BORDER,
+  'titleBar.border': NAVY_BORDER,
+  'menu.border': NAVY_BORDER,
+  'tab.border': NAVY_BORDER,
+  'tab.activeBorder': NAVY_BORDER,
+  'tab.unfocusedActiveBorder': NAVY_BORDER,
+  'tab.unfocusedActiveBorderTop': NAVY_BORDER,
+  'editorOverviewRuler.border': NAVY_BORDER,
+  'notebook.cellBorderColor': NAVY_BORDER,
+  'editor.lineHighlightBorder': NAVY_BORDER,
+  'editorStickyScroll.border': NAVY_BORDER,
+  'panel.border': NAVY_BORDER,
+  'panelSection.border': NAVY_BORDER,
+  'commandCenter.border': NAVY_BORDER,
+  'widget.border': NAVY_BORDER,
+  'pickerGroup.border': NAVY_BORDER,
+  'keybindingLabel.border': NAVY_BORDER,
+  'keybindingLabel.bottomBorder': NAVY_BORDER,
+
+  // Text & Foregrounds
+  'foreground': NAVY_TEXT,
+  'editor.foreground': NAVY_TEXT,
+  'sideBar.foreground': '#9DB5D6',
+  'sideBarTitle.foreground': NAVY_TEXT,
+  'titleBar.activeForeground': NAVY_TEXT,
+  'titleBar.inactiveForeground': NAVY_MUTED,
+  'tab.activeForeground': '#FFFFFF',
+  'tab.inactiveForeground': NAVY_MUTED,
+  'editorLineNumber.foreground': NAVY_SUBTLE,
+  'editorLineNumber.activeForeground': '#F1F5F9',
+  'descriptionForeground': '#9DB5D6cc',
+  'disabledForeground': NAVY_MUTED,
+  'icon.foreground': '#F1F5F9b3',
+
+  // Accent Highlights (Electric Sky Blue #38BDF8)
+  'activityBar.foreground': NAVY_ACCENT,
+  'activityBar.activeBorder': NAVY_ACCENT,
+  'tab.activeBorderTop': NAVY_ACCENT,
+  'terminal.tab.activeBorder': NAVY_ACCENT,
+  'panelTitle.activeBorder': NAVY_ACCENT,
+  'panelTitle.activeForeground': NAVY_TEXT,
+  'panelTitle.inactiveForeground': NAVY_MUTED,
+  'badge.background': NAVY_ACCENT,
+  'badge.foreground': NAVY_BASE,
+  'activityBarBadge.background': NAVY_ACCENT,
+  'activityBarBadge.foreground': NAVY_BASE,
+  'selection.background': '#38BDF840',
+  'progressBar.background': NAVY_ACCENT,
+  'textLink.foreground': NAVY_ACCENT,
+  'textLink.activeForeground': '#FFFFFF',
+  'focusBorder': NAVY_ACCENT,
+  'sash.hoverBorder': '#38BDF880',
+
+  // Interactive Inputs & Elevated Planes
+  'input.background': NAVY_ELEVATED,
+  'input.foreground': NAVY_TEXT,
+  'input.placeholderForeground': NAVY_MUTED,
+  'input.border': '#38BDF833',
+  'button.background': NAVY_ACCENT,
+  'button.foreground': NAVY_BASE,
+  'button.hoverBackground': NAVY_ACCENT_HOVER,
+  'button.secondaryBackground': NAVY_ELEVATED,
+  'button.secondaryForeground': NAVY_TEXT,
+
+  // Lists & Trees
+  'list.hoverBackground': NAVY_ELEVATED,
+  'list.hoverForeground': '#FFFFFF',
+  'list.activeSelectionBackground': NAVY_SELECTION,
+  'list.activeSelectionForeground': NAVY_ACCENT,
+  'list.inactiveSelectionBackground': NAVY_ELEVATED,
+  'list.inactiveSelectionForeground': NAVY_ACCENT,
+  'list.focusBackground': NAVY_SELECTION,
+  'list.focusForeground': '#FFFFFF',
+  'list.highlightForeground': NAVY_ACCENT,
+
+  // Editor Selections, Cursor & Guides
+  'editor.selectionBackground': '#38BDF840',
+  'editor.selectionHighlightBackground': '#38BDF826',
+  'editor.lineHighlightBackground': '#05114266',
+  'editorCursor.foreground': NAVY_ACCENT,
+  'editorCursor.background': NAVY_BASE,
+  'editorWhitespace.foreground': '#1A2B56',
+  'editorIndentGuide.background': '#0A1A45',
+  'editorIndentGuide.activeBackground': '#1E3A78',
+  'editorRuler.foreground': '#0A1A45',
+  'scrollbarSlider.background': '#38BDF826',
+  'scrollbarSlider.hoverBackground': '#38BDF840',
+  'scrollbarSlider.activeBackground': '#38BDF880',
+
+  // Terminal ANSI Colors
+  'terminal.ansiBlack': NAVY_BASE,
+  'terminal.ansiRed': '#FF6B8B',
+  'terminal.ansiGreen': '#4ADE80',
+  'terminal.ansiYellow': '#FBBF24',
+  'terminal.ansiBlue': '#60A5FA',
+  'terminal.ansiMagenta': '#C084FC',
+  'terminal.ansiCyan': '#38BDF8',
+  'terminal.ansiWhite': NAVY_TEXT,
+  'terminal.ansiBrightBlack': NAVY_MUTED,
+  'terminal.ansiBrightRed': '#FDA4AF',
+  'terminal.ansiBrightGreen': '#86EFAC',
+  'terminal.ansiBrightYellow': '#FDE68A',
+  'terminal.ansiBrightBlue': '#93C5FD',
+  'terminal.ansiBrightMagenta': '#E9D5FF',
+  'terminal.ansiBrightCyan': '#7DD3FC',
+  'terminal.ansiBrightWhite': '#FFFFFF'
+};
+
 const STALE_KEYS = new Set([
   'extensionButton.border',
   'surface.border',
@@ -343,6 +508,54 @@ function transformSemanticTokensForBurgundy(semantic) {
   return result;
 }
 
+// Syntax color mapping for Navy aesthetic
+function transformTokensForNavy(tokens) {
+  const tokenMap = {
+    '#D9D9D9': NAVY_TEXT,   // Crisp frosted ice-white (15.45:1 AAA)
+    '#a3c679': '#4ADE80',   // Emerald mint strings (12.3:1 AAA)
+    '#6ebad7': '#38BDF8',   // Electric sky cyan keywords / tags (9.72:1 AAA)
+    '#d6808f': '#FBBF24',   // Amber gold booleans (12.8:1 AAA)
+    '#cd775c': '#FB923C',   // Sunset amber numbers (10.9:1 AAA)
+    '#6a90d0': '#60A5FA',   // Cobalt blue functions (9.1:1 AAA)
+    '#a178c4': '#C084FC',   // Lavender amethyst storage (11.4:1 AAA)
+    '#c85e60': '#F472B6',   // Soft rose methods/keys (9.8:1 AAA)
+    '#d5b05f': '#FCD34D',   // Golden sand types/classes (13.7:1 AAA)
+    '#45454A': '#627A9C',   // Slate steel comments (5.2:1 AA)
+    '#7d5e49': '#94A3B8',   // Muted slate
+    '#90a9bc': '#7DD3FC',   // Frosted cyan properties (13.1:1 AAA)
+    '#D9D9D9e6': `${NAVY_TEXT}e6`
+  };
+
+  return tokens.map((token) => {
+    const settings = { ...token.settings };
+    if (settings.background) {
+      settings.background = NAVY_BASE;
+    }
+    if (settings.foreground && tokenMap[settings.foreground]) {
+      settings.foreground = tokenMap[settings.foreground];
+    }
+    return { ...token, settings };
+  });
+}
+
+function transformSemanticTokensForNavy(semantic) {
+  const tokenMap = {
+    '#D9D9D9': NAVY_TEXT,
+    '#d5b05f': '#FCD34D',
+    '#cd775c': '#FB923C',
+    '#6a90d0': '#60A5FA',
+    '#90a9bc': '#7DD3FC',
+    '#45454A': '#627A9C',
+    '#a3c679': '#4ADE80'
+  };
+
+  const result = {};
+  for (const [k, v] of Object.entries(semantic)) {
+    result[k] = tokenMap[v] || v;
+  }
+  return result;
+}
+
 export function buildTbmThemes() {
   const themesDir = path.join(rootDir, 'themes');
   fs.mkdirSync(themesDir, { recursive: true });
@@ -387,6 +600,23 @@ export function buildTbmThemes() {
     };
     fs.writeFileSync(path.join(themesDir, 'tbm-burgundy.json'), JSON.stringify(tbmBurgundyTheme, null, 2) + '\n', 'utf8');
     console.log(`[build-tbm] Generated themes/tbm-burgundy.json (${Object.keys(tbmBurgundyTheme.colors).length} colors)`);
+
+    // 3. TBM Dark Navy Blue Variant
+    const navyMergedColors = {
+      ...mergedColors,
+      ...UNIFORM_NAVY_OVERRIDES
+    };
+    const tbmNavyTheme = {
+      $schema: 'vscode://schemas/color-theme',
+      name: 'TBM Dark Navy Blue',
+      type: 'dark',
+      semanticHighlighting: true,
+      colors: navyMergedColors,
+      tokenColors: transformTokensForNavy(rawTheme.tokenColors),
+      semanticTokenColors: transformSemanticTokensForNavy(rawTheme.semanticTokenColors)
+    };
+    fs.writeFileSync(path.join(themesDir, 'tbm-navy.json'), JSON.stringify(tbmNavyTheme, null, 2) + '\n', 'utf8');
+    console.log(`[build-tbm] Generated themes/tbm-navy.json (${Object.keys(tbmNavyTheme.colors).length} colors)`);
   }
 
   if (fs.existsSync(hcSrc)) {

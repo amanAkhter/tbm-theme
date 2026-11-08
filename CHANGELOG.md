@@ -3,6 +3,8 @@
 ## [2026.9.6] - 2026-11-07
 
 ### Added
+- **TBM Dark Navy Blue Color Theme**: Deep dark midnight navy variant (`#00072D` uniform base & seamless borders) with electric sky blue (`#38BDF8`) accents, frosted silver-white (`#E2E8F0`) text, emerald mint (`#4ADE80`) strings, cobalt blue (`#60A5FA`) functions, sunset amber (`#FB923C`) numbers, and slate steel (`#627A9C`) comments. Exceeds WCAG AAA with **15.95:1** contrast ratio.
+- **TBM Dark Navy Blue Icons**: Dedicated file icon theme matching the Dark Navy Blue aesthetic, featuring deep navy blue closed folders (`#163275`), vibrant electric sky blue open folders (`#38BDF8`), and frosted slate/navy file glyphs across 393 icons.
 - **TBM Deep Dark Titanium Burgundy Color Theme**: Ultra-dark iPhone Pro titanium burgundy variant (`#160509` uniform obsidian wine base) with electric rose (`#FF7597`) accents, crisp rose-cream (`#F5E8EB`) text, sage mint (`#A8E6CF`) strings, cornflower periwinkle (`#7EB7E8`) functions, and dusty mauve (`#A87682`) comments. Exceeds WCAG AAA with **16.63:1** contrast ratio.
 - **TBM Deep Dark Titanium Burgundy File Icons**: Dedicated file icon theme matching the Titanium Burgundy aesthetic, featuring brushed titanium wine closed folders (`#8A4456`), glowing electric rose open folders (`#FF7597`), and harmonized file glyphs.
 - **Renamed to TBM Theme**: Published by Aman Akhter ([https://github.com/amanAkhter](https://github.com/amanAkhter)).
