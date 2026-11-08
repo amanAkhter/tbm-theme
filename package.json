@@ -79,5 +79,9 @@
     "doctor": "node scripts/doctor.mjs",
     "install": "node scripts/install.mjs",
     "apply-settings": "node scripts/apply-settings.mjs"
+  },
+  "publisherDisplayName": "Aman Akhter",
+  "__metadata": {
+    "publisherDisplayName": "Aman Akhter"
   }
 }

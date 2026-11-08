@@ -23,6 +23,21 @@ console.log(`[install] Installing ${vsixPath} into Antigravity IDE...`);
 try {
   execSync(`agy-ide --install-extension "${vsixPath}" --force`, { cwd: rootDir, stdio: 'inherit' });
   console.log('[install] Successfully installed extension into Antigravity IDE!');
+
+  // Sync publisherDisplayName into extensions.json for local UI display
+  try {
+    const extJsonPath = path.join(process.env.HOME || '', '.antigravity-ide', 'extensions', 'extensions.json');
+    if (fs.existsSync(extJsonPath)) {
+      const extJson = JSON.parse(fs.readFileSync(extJsonPath, 'utf8'));
+      const match = extJson.find(e => e.identifier.id.toLowerCase() === 'amanakhter.tbm-theme');
+      if (match) {
+        if (!match.metadata) match.metadata = {};
+        match.metadata.publisherDisplayName = 'Aman Akhter';
+        fs.writeFileSync(extJsonPath, JSON.stringify(extJson, null, 2), 'utf8');
+      }
+    }
+  } catch {}
+
   console.log('[install] To activate: open Command Palette (Cmd+Shift+P) -> "Preferences: Color Theme" -> select "TBM Theme"');
 } catch (err) {
   console.warn('[install] Automatic CLI install failed or CLI not found.');
