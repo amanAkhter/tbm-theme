@@ -75,7 +75,7 @@
   "scripts": {
     "build": "node scripts/build-tbm.mjs && node scripts/build-burgundy-icons.mjs && node scripts/build-navy-icons.mjs",
     "validate": "node scripts/validate.mjs",
-    "package": "npx @vscode/vsce package --no-dependencies",
+    "package": "npx --yes @vscode/vsce package --no-dependencies",
     "doctor": "node scripts/doctor.mjs",
     "install": "node scripts/install.mjs",
     "apply-settings": "node scripts/apply-settings.mjs"

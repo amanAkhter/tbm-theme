@@ -18,4 +18,8 @@ PostCreation.md
 .gitignore
 .vscodeignore
 .DS_Store
+*.nopush.*
+*.txt
+graphify-out/**
+pnpm-lock.yaml
 

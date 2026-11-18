@@ -80,6 +80,33 @@ function validateThemeJson(themePath) {
     errors.push(`Contrast failure: editor.foreground vs editor.background is ${fgRatio.toFixed(2)}:1 (minimum 4.5:1 required)`);
   }
 
+  // Verify Explorer git-change & error/squiggle diagnostic highlighting
+  const sideBarBg = theme.colors['sideBar.background'] || editorBg;
+  const requiredStatusKeys = [
+    { key: 'gitDecoration.untrackedResourceForeground', bg: sideBarBg, minRatio: 4.5 },
+    { key: 'gitDecoration.addedResourceForeground', bg: sideBarBg, minRatio: 4.5 },
+    { key: 'gitDecoration.modifiedResourceForeground', bg: sideBarBg, minRatio: 4.5 },
+    { key: 'gitDecoration.stageModifiedResourceForeground', bg: sideBarBg, minRatio: 4.5 },
+    { key: 'list.errorForeground', bg: sideBarBg, minRatio: 4.5 },
+    { key: 'list.warningForeground', bg: sideBarBg, minRatio: 4.5 },
+    { key: 'editorError.foreground', bg: editorBg, minRatio: 4.5 },
+    { key: 'editorWarning.foreground', bg: editorBg, minRatio: 4.5 },
+    { key: 'editorInfo.foreground', bg: editorBg, minRatio: 4.5 },
+    { key: 'minimap.errorHighlight', bg: editorBg, minRatio: 4.5 }
+  ];
+
+  for (const { key, bg, minRatio } of requiredStatusKeys) {
+    const val = theme.colors[key];
+    if (!val) {
+      errors.push(`Missing required highlight key: ${key}`);
+      continue;
+    }
+    const ratio = getContrastRatio(val, bg);
+    if (ratio < minRatio) {
+      errors.push(`Contrast failure: ${key} (${val}) vs ${bg} is ${ratio.toFixed(2)}:1 (minimum ${minRatio}:1 required)`);
+    }
+  }
+
   return errors;
 }
 

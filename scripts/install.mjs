@@ -17,7 +17,7 @@ console.log('[install] Building and validating TBM Theme...');
 execSync('npm run build && npm run validate', { cwd: rootDir, stdio: 'inherit' });
 
 console.log('[install] Packaging extension VSIX...');
-execSync('npx @vscode/vsce package --no-dependencies --allow-missing-repository', { cwd: rootDir, stdio: 'inherit' });
+execSync('npx --yes @vscode/vsce package --no-dependencies --allow-missing-repository', { cwd: rootDir, stdio: 'inherit' });
 
 console.log(`[install] Installing ${vsixPath} into Antigravity IDE...`);
 try {

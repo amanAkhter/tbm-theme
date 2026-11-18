@@ -1,6 +1,6 @@
 # TBM Theme Doctor Report
 
-*Generated on: 11/9/2026, 2:18:40 AM*
+*Generated on: 18/11/2026, 7:10:10 pm*
 
 ## Environment
 - **Editor**: Antigravity IDE
@@ -10,10 +10,10 @@
 - **Status**: ✅ Compatible
 
 ## Registry Compatibility
-- **Our Defined Colors**: 298
+- **Our Defined Colors**: 348
 - **Editor Known Colors**: 906
 - **Stale Keys**: 0
-- **New / Unstyled Keys in Editor**: 608
+- **New / Unstyled Keys in Editor**: 558
 
 ### Stale Keys (Set by us, but dropped by editor)
 - None. All defined keys are valid.
@@ -23,9 +23,6 @@
 - `activityBar.dropBorder`
 - `agentSessionReadIndicator.foreground`
 - `chat.avatarBackground`
-- `chat.editedFileForeground`
-- `chat.linesAddedForeground`
-- `chat.linesRemovedForeground`
 - `chat.requestBackground`
 - `editor.compositionBorder`
 - `editor.findMatchForeground`
@@ -49,6 +46,9 @@
 - `editor.snippetTabstopHighlightBorder`
 - `editor.stackFrameHighlightBackground`
 - `editor.symbolHighlightBackground`
+- `editor.symbolHighlightBorder`
+- `editor.wordHighlightBorder`
+- `editor.wordHighlightStrongBorder`
 
 ## Health Verdict
 ⚠️ **HEALTHY WITH WARNINGS**: Minor unthemed surfaces detected.

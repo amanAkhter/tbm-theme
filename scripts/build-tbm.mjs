@@ -8,6 +8,135 @@ import { fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, '..');
 
+function buildStatusAndChangeColors({
+  baseBg,
+  untracked,
+  added,
+  modified,
+  stageModified,
+  renamed,
+  deleted,
+  stageDeleted,
+  conflicting,
+  submodule,
+  ignored,
+  error,
+  errorHover,
+  errorBg,
+  errorFg,
+  warning,
+  warningHover,
+  warningBg,
+  warningFg,
+  info,
+  infoBg,
+  infoFg,
+  hint
+}) {
+  return {
+    // Explorer & File/Folder New Change Highlighting (Git Decorations)
+    'gitDecoration.untrackedResourceForeground': untracked,
+    'gitDecoration.addedResourceForeground': added,
+    'gitDecoration.modifiedResourceForeground': modified,
+    'gitDecoration.stageModifiedResourceForeground': stageModified,
+    'gitDecoration.renamedResourceForeground': renamed,
+    'gitDecoration.deletedResourceForeground': deleted,
+    'gitDecoration.stageDeletedResourceForeground': stageDeleted,
+    'gitDecoration.conflictingResourceForeground': conflicting,
+    'gitDecoration.submoduleResourceForeground': submodule,
+    'gitDecoration.ignoredResourceForeground': ignored,
+
+    // Modified / Unsaved Editor Tabs
+    'tab.activeModifiedBorder': modified,
+    'tab.inactiveModifiedBorder': `${modified}80`,
+    'tab.unfocusedActiveModifiedBorder': `${modified}b3`,
+    'tab.unfocusedInactiveModifiedBorder': `${modified}59`,
+
+    // Editor Gutter, Diff, Overview Ruler & Minimap Change Indicators
+    'editorGutter.addedBackground': `${untracked}cc`,
+    'editorGutter.modifiedBackground': `${modified}cc`,
+    'editorGutter.deletedBackground': `${error}cc`,
+    'editorGutter.addedSecondaryBackground': `${untracked}80`,
+    'editorGutter.modifiedSecondaryBackground': `${modified}80`,
+    'editorGutter.deletedSecondaryBackground': `${error}80`,
+    'diffEditor.insertedLineBackground': `${untracked}14`,
+    'diffEditor.insertedTextBackground': `${untracked}26`,
+    'diffEditor.removedLineBackground': `${error}14`,
+    'diffEditor.removedTextBackground': `${error}26`,
+    'editorOverviewRuler.addedForeground': `${untracked}b3`,
+    'editorOverviewRuler.modifiedForeground': `${modified}b3`,
+    'editorOverviewRuler.deletedForeground': `${error}b3`,
+    'minimapGutter.addedBackground': `${untracked}cc`,
+    'minimapGutter.modifiedBackground': `${modified}cc`,
+    'minimapGutter.deletedBackground': `${error}cc`,
+
+    // Chat / Agent Edited File & Diff Indicators
+    'chat.editedFileForeground': modified,
+    'chat.linesAddedForeground': untracked,
+    'chat.linesRemovedForeground': error,
+
+    // Editor Squiggle Diagnostics (Error / Warning / Info / Hint)
+    'editorError.foreground': error,
+    'editorWarning.foreground': warning,
+    'editorInfo.foreground': info,
+    'editorHint.foreground': hint,
+
+    // Explorer Folder & File Error / Warning Highlighting
+    'list.errorForeground': error,
+    'list.warningForeground': warning,
+    'list.invalidItemForeground': error,
+    'errorForeground': error,
+
+    // Problems Panel & Marker Navigation (F8 Peek)
+    'problemsErrorIcon.foreground': error,
+    'problemsWarningIcon.foreground': warning,
+    'problemsInfoIcon.foreground': info,
+    'editorMarkerNavigationError.background': error,
+    'editorMarkerNavigationError.headerBackground': `${error}1a`,
+    'editorMarkerNavigationWarning.background': warning,
+    'editorMarkerNavigationWarning.headerBackground': `${warning}1a`,
+    'editorMarkerNavigationInfo.background': info,
+    'editorMarkerNavigationInfo.headerBackground': `${info}1a`,
+
+    // Overview Ruler & Minimap Diagnostics
+    'editorOverviewRuler.errorForeground': `${error}e6`,
+    'editorOverviewRuler.warningForeground': `${warning}e6`,
+    'editorOverviewRuler.infoForeground': `${info}cc`,
+    'minimap.errorHighlight': error,
+    'minimap.warningHighlight': warning,
+    'minimap.infoHighlight': info,
+
+    // Activity Bar Badges, Status Bar, Notifications, Validation & Debug Console
+    'activityErrorBadge.background': error,
+    'activityErrorBadge.foreground': baseBg,
+    'activityWarningBadge.background': warning,
+    'activityWarningBadge.foreground': baseBg,
+    'notificationsErrorIcon.foreground': error,
+    'notificationsWarningIcon.foreground': warning,
+    'notificationsInfoIcon.foreground': info,
+    'inputValidation.errorBorder': error,
+    'inputValidation.errorBackground': errorBg,
+    'inputValidation.errorForeground': errorFg,
+    'inputValidation.warningBorder': warning,
+    'inputValidation.warningBackground': warningBg,
+    'inputValidation.warningForeground': warningFg,
+    'inputValidation.infoBorder': info,
+    'inputValidation.infoBackground': infoBg,
+    'inputValidation.infoForeground': infoFg,
+    'statusBarItem.errorBackground': error,
+    'statusBarItem.errorForeground': baseBg,
+    'statusBarItem.errorHoverBackground': errorHover,
+    'statusBarItem.errorHoverForeground': baseBg,
+    'statusBarItem.warningBackground': warning,
+    'statusBarItem.warningForeground': baseBg,
+    'statusBarItem.warningHoverBackground': warningHover,
+    'statusBarItem.warningHoverForeground': baseBg,
+    'debugConsole.errorForeground': error,
+    'debugConsole.warningForeground': warning,
+    'debugConsole.infoForeground': info
+  };
+}
+
 const UNIFORM_CARBON_OVERRIDES = {
   // Uniform Background Surfaces
   'editor.background': '#0A0A0A',
@@ -96,7 +225,33 @@ const UNIFORM_CARBON_OVERRIDES = {
   'statusBarItem.offlineBackground': '#56575D',
   'statusBarItem.offlineForeground': '#0A0A0A',
   'statusBarItem.offlineHoverBackground': '#80CBC4',
-  'statusBarItem.offlineHoverForeground': '#0A0A0A'
+  'statusBarItem.offlineHoverForeground': '#0A0A0A',
+
+  ...buildStatusAndChangeColors({
+    baseBg: '#0A0A0A',
+    untracked: '#4ADE80',
+    added: '#34D399',
+    modified: '#E8C468',
+    stageModified: '#F5B041',
+    renamed: '#5EEAD4',
+    deleted: '#F07178',
+    stageDeleted: '#E0525B',
+    conflicting: '#D896FF',
+    submodule: '#7EB7E8',
+    ignored: '#56575D80',
+    error: '#FF4D4F',
+    errorHover: '#FF6B6D',
+    errorBg: '#2A0D10',
+    errorFg: '#FFD6D6',
+    warning: '#FFA94D',
+    warningHover: '#FFBC70',
+    warningBg: '#2A1E0A',
+    warningFg: '#FFE8C2',
+    info: '#58A6FF',
+    infoBg: '#0D1C2E',
+    infoFg: '#D6EBFF',
+    hint: '#80CBC4b3'
+  })
 };
 
 const UNIFORM_HC_OVERRIDES = {
@@ -128,7 +283,33 @@ const UNIFORM_HC_OVERRIDES = {
   'titleBar.border': '#000000',
   'tab.border': '#000000',
   'tab.activeBorder': '#000000',
-  'panel.border': '#000000'
+  'panel.border': '#000000',
+
+  ...buildStatusAndChangeColors({
+    baseBg: '#000000',
+    untracked: '#5CEB91',
+    added: '#45E6AA',
+    modified: '#F5D073',
+    stageModified: '#FFC05C',
+    renamed: '#73F5E0',
+    deleted: '#FF7A80',
+    stageDeleted: '#F5656E',
+    conflicting: '#E2ABFF',
+    submodule: '#94C7F2',
+    ignored: '#56575D99',
+    error: '#FF5C5C',
+    errorHover: '#FF7A7A',
+    errorBg: '#2B080A',
+    errorFg: '#FFE0E0',
+    warning: '#FFB85C',
+    warningHover: '#FFCA80',
+    warningBg: '#2B1D05',
+    warningFg: '#FFEFD1',
+    info: '#79C0FF',
+    infoBg: '#081B33',
+    infoFg: '#E0F0FF',
+    hint: '#80CBC4cc'
+  })
 };
 
 // TBM Burgundy Palette (Deep iPhone Pro Dark Titanium Burgundy #100306 Base Surface)
@@ -314,7 +495,33 @@ const UNIFORM_BURGUNDY_OVERRIDES = {
   'terminal.ansiBrightBlue': '#A8D4F7',
   'terminal.ansiBrightMagenta': '#EDBFFF',
   'terminal.ansiBrightCyan': '#C4E9FF',
-  'terminal.ansiBrightWhite': '#FFFFFF'
+  'terminal.ansiBrightWhite': '#FFFFFF',
+
+  ...buildStatusAndChangeColors({
+    baseBg: BURGUNDY_BASE,
+    untracked: '#4ADE80',
+    added: '#5CE6B0',
+    modified: '#F2C97D',
+    stageModified: '#FFB86C',
+    renamed: '#8CE0FF',
+    deleted: '#F87171',
+    stageDeleted: '#EF5350',
+    conflicting: '#E6A8FF',
+    submodule: '#7EB7E8',
+    ignored: '#8A5D668C',
+    error: '#FF453A',
+    errorHover: '#FF6961',
+    errorBg: '#2B080D',
+    errorFg: '#FFD9D6',
+    warning: '#FFA94D',
+    warningHover: '#FFBF75',
+    warningBg: '#2B180A',
+    warningFg: '#FFECD1',
+    info: '#7EB7E8',
+    infoBg: '#1A1024',
+    infoFg: '#DCEEFF',
+    hint: '#A8E6CFb3'
+  })
 };
 
 const UNIFORM_NAVY_OVERRIDES = {
@@ -478,7 +685,33 @@ const UNIFORM_NAVY_OVERRIDES = {
   'terminal.ansiBrightBlue': '#93C5FD',
   'terminal.ansiBrightMagenta': '#E9D5FF',
   'terminal.ansiBrightCyan': '#7DD3FC',
-  'terminal.ansiBrightWhite': '#FFFFFF'
+  'terminal.ansiBrightWhite': '#FFFFFF',
+
+  ...buildStatusAndChangeColors({
+    baseBg: NAVY_BASE,
+    untracked: '#4ADE80',
+    added: '#34D399',
+    modified: '#F5C451',
+    stageModified: '#FBBF24',
+    renamed: '#67E8F9',
+    deleted: '#F87171',
+    stageDeleted: '#EF5350',
+    conflicting: '#D8B4FE',
+    submodule: '#7DD3FC',
+    ignored: '#546A8C8C',
+    error: '#FF5252',
+    errorHover: '#FF7070',
+    errorBg: '#220B18',
+    errorFg: '#FFD9D9',
+    warning: '#FB923C',
+    warningHover: '#FDBA74',
+    warningBg: '#1E180A',
+    warningFg: '#FFEDD5',
+    info: '#60A5FA',
+    infoBg: '#081B38',
+    infoFg: '#DBEAFE',
+    hint: '#7DD3FCb3'
+  })
 };
 
 const STALE_KEYS = new Set([
